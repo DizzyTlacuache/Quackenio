@@ -754,3 +754,211 @@ footer .footer-tagline {
   .menu-grid  { grid-template-columns: 1fr; }
   .contact-form-wrapper { padding: 1.5rem; }
 }
+
+/* ---------- About Page ---------- */
+
+/* Founders grid: two placeholder cards side by side */
+.story-founders-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.founder-card {
+  background: var(--dark-card);
+  border: 1px solid rgba(255,214,0,0.12);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.founder-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+}
+
+.founder-img-placeholder {
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+  border-bottom: 2px dashed rgba(255,214,0,0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 220px;
+  padding: 1.5rem;
+  color: var(--gray);
+}
+
+.founder-img-placeholder span {
+  font-size: 3.5rem;
+  filter: grayscale(0.2);
+}
+
+.founder-img-placeholder p {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  text-align: center;
+  margin: 0;
+}
+
+.founder-img-placeholder small {
+  font-size: 0.75rem;
+  color: var(--yellow);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.founder-caption {
+  padding: 1.5rem;
+}
+
+.founder-caption h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--yellow);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+}
+
+.founder-caption p {
+  color: var(--gray);
+  font-size: 0.93rem;
+  line-height: 1.75;
+}
+
+/* Main story: text + real image */
+.story-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.story-text p {
+  color: var(--gray);
+  font-size: 1rem;
+  line-height: 1.85;
+  margin-bottom: 1.2rem;
+}
+
+.story-text em {
+  color: var(--yellow);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.story-img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 2px solid rgba(255,214,0,0.2);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+  display: block;
+}
+
+.story-img-caption {
+  text-align: center;
+  font-size: 0.78rem;
+  color: rgba(170,170,170,0.55);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 0.75rem;
+}
+
+/* Training steps */
+.training-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.training-step {
+  background: var(--dark-card);
+  border: 1px solid rgba(255,214,0,0.1);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.training-step:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,214,0,0.35);
+}
+
+.step-icon {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.training-step h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--yellow);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.75rem;
+}
+
+.training-step p {
+  color: var(--gray);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+/* Closing / quote block */
+.about-birth-inner {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.story-quote {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--yellow);
+  letter-spacing: 0.04em;
+  border-left: 4px solid var(--yellow);
+  padding: 1rem 2rem;
+  margin: 2rem auto;
+  text-align: left;
+  max-width: 680px;
+  background: rgba(255,214,0,0.04);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.story-quote cite {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 0.75rem;
+  font-style: normal;
+}
+
+.story-closing {
+  color: var(--gray);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin-bottom: 1.2rem;
+}
+
+.story-closing strong { color: var(--white); }
+
+/* About responsive */
+@media (max-width: 768px) {
+  .story-founders-grid,
+  .story-main-grid,
+  .training-steps {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

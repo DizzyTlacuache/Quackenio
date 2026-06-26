@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="La historia de Quackenio — tres generaciones de baristas y el pato que lo cambio todo." />
+  <title>Quackenio | Acerca de</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .reveal.revealed { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="Navegacion principal">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">QUACKEN<span>IO</span></a>
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Acerca de</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Con-quack-tanos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <h1>NUESTRA <em>HISTORIA</em></h1>
+    <p>Tres generaciones. Un pato. Un destino.</p>
+  </header>
+
+  <main>
+
+    <!-- ── Bloque 1: El linaje ── -->
+    <section class="section about-story" aria-labelledby="linaje-title">
+      <div class="container">
+        <h2 class="section-title" id="linaje-title">EL LINAJE <em>QUACK</em></h2>
+        <span class="section-divider"></span>
+        <p class="section-subtitle">Una familia cuya sangre sabe a espresso</p>
+
+        <div class="story-founders-grid">
+          <!-- Placeholder abuelo -->
+          <div class="founder-card">
+            <div class="founder-img-placeholder">
+              <span>🦆</span>
+              <p>Don Plumón Quack</p>
+              <small>Abuelo Fundador · 1972</small>
+            </div>
+            <div class="founder-caption">
+              <h3>Don Plumón Quack</h3>
+              <p>
+                Todo comenzo con Don Plumón, un pato campesino de Oaxaca con manos temblorosas
+                y un olfato sobrenatural para el grano. Dicen que el primer sorbo de su café
+                hacia que los pájaros callaran para escuchar mejor. Establecio la primera
+                barra familiar en los años setenta, entre costales de Pluma Hidalgo y sueños
+                grandes como su pico.
+              </p>
+            </div>
+          </div>
+
+          <!-- Placeholder padre -->
+          <div class="founder-card">
+            <div class="founder-img-placeholder">
+              <span>🦆</span>
+              <p>Don Aleteo Quack</p>
+              <small>Segunda Generacion · 1998</small>
+            </div>
+            <div class="founder-caption">
+              <h3>Don Aleteo Quack</h3>
+              <p>
+                El hijo de Don Plumón heredo el pico fino y la paciencia infinita. Fue el
+                primero de la familia en dominar el Pour Over, tecnica que aprendio en un
+                viaje a Kioto donde intercambio granos Oaxaquenos por secretos japoneses de
+                extraccion. Bajo su ala la barra familiar se convirtio en el punto de encuentro
+                de todo el barrio.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Bloque 2: Orlando y Quackencio ── -->
+    <section class="section about-orlando" style="background: var(--dark);" aria-labelledby="orlando-title">
+      <div class="container">
+        <h2 class="section-title" id="orlando-title">ORLANDO Y EL <em>ELEGIDO</em></h2>
+        <span class="section-divider"></span>
+        <p class="section-subtitle">El dia que un pato vio potencial donde nadie mas miraba</p>
+
+        <div class="story-main-grid">
+          <div class="story-text">
+            <p>
+              Orlando Quack — tercera generacion, heredero de la barra sagrada — era ya una
+              leyenda en el campus. Sus Pour Overs llegaban a la taza con la precision de un
+              reloj suizo y el alma de una cancion de cuna. Pero Orlando sabia algo que su
+              familia aun no comprendia: <em>el don del cafe no corre solo por la sangre de los patos.</em>
+            </p>
+            <p>
+              Un martes ordinario, entre el vapor del hervidor y el aroma del Oaxaca Pluma,
+              aparecio Quackencio. Un humano. Sin linaje de plumas, sin tradicion familiar,
+              sin idea alguna de la diferencia entre un Chemex y un Kalita. Solo tenia
+              hambre de aprender y una sonrisa que encendia el salon.
+            </p>
+            <p>
+              Orlando lo miro fijo. Ladeó la cabeza. Y cuack.
+            </p>
+            <p>
+              Ese <em>cuack</em> lo decia todo. Ese dia, el pato tomo al humano bajo su ala.
+            </p>
+          </div>
+
+          <div class="story-img-wrapper">
+            <img
+              src="images/quackenio.jpeg"
+              alt="Orlando el pato y Quackencio el humano, juntos detras de la barra de Quackenio"
+              class="story-img"
+            />
+            <p class="story-img-caption">Orlando y Quackencio — la barra, el pato, el destino.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Bloque 3: El entrenamiento ── -->
+    <section class="section about-training" aria-labelledby="training-title">
+      <div class="container">
+        <h2 class="section-title" id="training-title">EL ENTRENAMIENTO <em>CUACKTACULAR</em></h2>
+        <span class="section-divider"></span>
+        <p class="section-subtitle">No fue facil. Los mejores caminos nunca lo son.</p>
+
+        <div class="training-steps">
+          <div class="training-step">
+            <div class="step-icon">☕</div>
+            <h3>Primer Cuack: El Espresso</h3>
+            <p>
+              Orlando coloco a Quackencio frente a la maquina. El primer shot salio amargo
+              como una ruptura. Orlando meneó la cabeza. Cuack. Lo intentaron veintisiete veces
+              hasta que la crema fue perfecta. Quackencio lloro un poco. Orlando fingio no verlo.
+            </p>
+          </div>
+
+          <div class="training-step">
+            <div class="step-icon">🫗</div>
+            <h3>Segundo Cuack: El Pour Over</h3>
+            <p>
+              La tecnica del vertido circular que Don Plumón transmitio a Don Aleteo y Don Aleteo
+              a Orlando, ahora pasaba por primera vez a manos humanas. Orlando guiaba la jarra
+              con su ala, Quackencio seguia con dedos torpes pero corazon preciso. El resultado:
+              flores de miel y durazno en cada taza.
+            </p>
+          </div>
+
+          <div class="training-step">
+            <div class="step-icon">🧊</div>
+            <h3>Tercer Cuack: El Cold Brew</h3>
+            <p>
+              Dieciocho horas de espera. Orlando le enseño que el buen cafe, como los buenos
+              patos, no se apresura. Quackencio aprendio la paciencia. Y cuando por fin probaron
+              el Cold Brew juntos al amanecer, ambos supieron que algo grande estaba naciendo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Bloque 4: El nacimiento de Quackenio ── -->
+    <section class="section about-birth" style="background: var(--dark);" aria-labelledby="birth-title">
+      <div class="container about-birth-inner">
+        <h2 class="section-title" id="birth-title">ASI NACIO <em>QUACKENIO</em></h2>
+        <span class="section-divider"></span>
+        <blockquote class="story-quote">
+          "No importa si eres pato o humano. Lo que importa es como tratas el grano."
+          <cite>— Orlando Quack, Maestro Barista</cite>
+        </blockquote>
+        <p class="story-closing">
+          Cuando Quackencio ya dominaba cada tecnica, Orlando lo miro una ultima vez con
+          esa inclinacion de cabeza que lo decia todo. Cuack suave. El de la aprobacion.
+          Juntos abrieron la barra. Le pusieron el nombre que lleva el legado de tres
+          generaciones y el espiritu del humano que se atrevo a creer en un pato.
+          <strong>Quackenio.</strong>
+        </p>
+        <p class="story-closing" style="text-align:center; margin-top:2rem;">
+          <a href="menu.html" class="btn btn-primary" style="margin-right:1rem;">Ver la carta</a>
+          <a href="contact.html" class="btn btn-outline">Con-quack-tanos</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Evaluacion banner ── -->
+    <section class="eval-banner" aria-label="Portal de evaluacion">
+      <h2>¿Ya eres parte de la familia Quack?</h2>
+      <p>Cuentanos tu experiencia, cuack a cuack. Toma menos de 2 minutos.</p>
+      <a href="https://forms.cloud.microsoft/r/SLcjeuqy2h" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+        Evaluar Quackenio
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p class="footer-brand">QUACKENIO</p>
+    <p class="footer-tagline">Fuel your day, the Quackenio way.</p>
+    <p>&copy; 2026 Quackenio. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
