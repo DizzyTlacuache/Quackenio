@@ -868,6 +868,28 @@ footer .footer-tagline {
   margin-top: 0.75rem;
 }
 
+/* Reverse column order for alternating layout */
+.story-main-grid--reverse {
+  direction: rtl;
+}
+.story-main-grid--reverse > * {
+  direction: ltr;
+}
+
+/* Social media full-width collage */
+.social-collage {
+  margin-top: 2rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 2px solid rgba(255,214,0,0.15);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+}
+
+.social-collage-img {
+  width: 100%;
+  display: block;
+}
+
 /* Training steps */
 .training-steps {
   display: grid;
