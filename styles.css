@@ -780,11 +780,14 @@ footer .footer-tagline {
 .founder-portrait-wrap {
   background: #0d0d0d;
   border-bottom: 2px solid rgba(255,214,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .founder-portrait {
   width: 100%;
-  height: 440px;
+  height: auto;
   object-fit: contain;
   object-position: center;
   display: block;
@@ -867,10 +870,14 @@ footer .footer-tagline {
 
 .story-img {
   width: 100%;
+  height: auto;
   border-radius: var(--radius);
+  background: #0d0d0d;
   border: 2px solid rgba(255,214,0,0.2);
   box-shadow: 0 16px 48px rgba(0,0,0,0.5);
   display: block;
+  object-fit: contain;
+  object-position: center;
 }
 
 .story-img-caption {
