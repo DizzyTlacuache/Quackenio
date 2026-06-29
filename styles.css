@@ -777,6 +777,20 @@ footer .footer-tagline {
   box-shadow: 0 12px 32px rgba(0,0,0,0.4);
 }
 
+.founder-portrait-wrap {
+  background: #0d0d0d;
+  border-bottom: 2px solid rgba(255,214,0,0.2);
+}
+
+.founder-portrait {
+  width: 100%;
+  height: 440px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  cursor: zoom-in;
+}
+
 .founder-img-placeholder {
   background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
   border-bottom: 2px dashed rgba(255,214,0,0.25);
@@ -888,6 +902,87 @@ footer .footer-tagline {
 .social-collage-img {
   width: 100%;
   display: block;
+  cursor: zoom-in;
+}
+
+/* Founder/gallery viewer modal */
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: none;
+}
+
+.gallery-modal.open {
+  display: block;
+}
+
+.gallery-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.82);
+}
+
+.gallery-panel {
+  position: relative;
+  z-index: 1;
+  width: min(92vw, 960px);
+  margin: 4vh auto;
+  background: #111;
+  border: 1px solid rgba(255,214,0,0.24);
+  border-radius: 12px;
+  padding: 1.2rem;
+  max-height: 92vh;
+  overflow: auto;
+}
+
+.gallery-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.6rem;
+  font-size: 1.8rem;
+  line-height: 1;
+  border: none;
+  background: transparent;
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+.gallery-modal-image {
+  width: 100%;
+  max-height: 72vh;
+  object-fit: contain;
+  transform-origin: center center;
+  transition: transform 0.2s ease;
+}
+
+.gallery-caption {
+  color: var(--gray);
+  text-align: center;
+  font-size: 0.9rem;
+  margin: 0.8rem 0 1rem;
+  letter-spacing: 0.05em;
+}
+
+.gallery-controls {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery-btn {
+  border: 1px solid rgba(255,214,0,0.35);
+  background: #171717;
+  color: var(--yellow);
+  padding: 0.55rem 0.9rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.gallery-btn:hover {
+  background: rgba(255,214,0,0.1);
 }
 
 /* Training steps */

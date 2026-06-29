@@ -42,44 +42,70 @@
         <p class="section-subtitle">Una familia cuya sangre sabe a espresso</p>
 
         <div class="story-founders-grid">
-          <!-- Placeholder abuelo -->
+          <!-- Retrato abuelo -->
           <div class="founder-card">
-            <div class="founder-img-placeholder">
-              <span>🦆</span>
-              <p>Don Plumón Quack</p>
-              <small>Abuelo Fundador · 1972</small>
+            <div class="founder-portrait-wrap">
+              <img
+                src="images/don_plumon.jpeg"
+                alt="Retrato de Don Plumon Quack, abuelo fundador de la familia"
+                class="founder-portrait"
+                data-gallery-item
+                data-gallery-label="Don Plumon Quack"
+              />
             </div>
             <div class="founder-caption">
               <h3>Don Plumón Quack</h3>
               <p>
-                Todo comenzo con Don Plumón, un pato campesino de Oaxaca con manos temblorosas
-                y un olfato sobrenatural para el grano. Dicen que el primer sorbo de su café
-                hacia que los pájaros callaran para escuchar mejor. Establecio la primera
-                barra familiar en los años setenta, entre costales de Pluma Hidalgo y sueños
-                grandes como su pico.
+                Abuelo fundador de la casa Quack. Su historia completa vive en su retrato,
+                donde comienza la leyenda cafetera de 1972.
               </p>
             </div>
           </div>
 
-          <!-- Placeholder padre -->
+          <!-- Retrato padre -->
           <div class="founder-card">
-            <div class="founder-img-placeholder">
-              <span>🦆</span>
-              <p>Don Aleteo Quack</p>
-              <small>Segunda Generacion · 1998</small>
+            <div class="founder-portrait-wrap">
+              <img
+                src="images/don_aleteo.jpeg"
+                alt="Retrato de Don Aleteo Quack, segunda generacion de baristas"
+                class="founder-portrait"
+                data-gallery-item
+                data-gallery-label="Don Aleteo Quack"
+              />
             </div>
             <div class="founder-caption">
               <h3>Don Aleteo Quack</h3>
               <p>
-                El hijo de Don Plumón heredo el pico fino y la paciencia infinita. Fue el
-                primero de la familia en dominar el Pour Over, tecnica que aprendio en un
-                viaje a Kioto donde intercambio granos Oaxaquenos por secretos japoneses de
-                extraccion. Bajo su ala la barra familiar se convirtio en el punto de encuentro
-                de todo el barrio.
+                Segunda generacion del linaje. En su retrato se cuenta como llevo la tecnica
+                familiar a otro nivel y preparo el camino para Orlando.
               </p>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ── Bloque 1.5: La familia Quackenio ── -->
+    <section class="section about-family" style="background: var(--dark);" aria-labelledby="family-title">
+      <div class="container">
+        <h2 class="section-title" id="family-title">LA FAMILIA <em>QUACKENIO</em></h2>
+        <span class="section-divider"></span>
+        <p class="section-subtitle">El legado completo en una sola imagen</p>
+
+        <div class="social-collage" style="margin-top: 0.5rem;">
+          <img
+            src="images/familia_quackenio.jpeg"
+            alt="Foto de la familia Quackenio reunida"
+            class="social-collage-img"
+            data-gallery-item
+            data-gallery-label="Familia Quackenio"
+          />
+        </div>
+
+        <p class="story-closing" style="text-align:center; margin-top:1.5rem;">
+          Tres generaciones, nuevas ideas y el mismo corazon por el cafe.
+          Esta nueva foto de familia representa el pasado, presente y futuro de Quackenio.
+        </p>
       </div>
     </section>
 
@@ -347,6 +373,21 @@
     <p class="footer-tagline">Fuel your day, the Quackenio way.</p>
     <p>&copy; 2026 Quackenio. Todos los derechos reservados.</p>
   </footer>
+
+  <div class="gallery-modal" id="gallery-modal" aria-hidden="true" role="dialog" aria-label="Visor de imagenes">
+    <div class="gallery-backdrop" data-gallery-close></div>
+    <div class="gallery-panel">
+      <button type="button" class="gallery-close" data-gallery-close aria-label="Cerrar visor">×</button>
+      <img src="" alt="" class="gallery-modal-image" id="gallery-modal-image" />
+      <p class="gallery-caption" id="gallery-caption"></p>
+      <div class="gallery-controls">
+        <button type="button" class="gallery-btn" id="gallery-prev">Anterior</button>
+        <button type="button" class="gallery-btn" id="gallery-zoom-in">Zoom +</button>
+        <button type="button" class="gallery-btn" id="gallery-zoom-out">Zoom -</button>
+        <button type="button" class="gallery-btn" id="gallery-next">Siguiente</button>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

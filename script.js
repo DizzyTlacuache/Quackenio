@@ -180,3 +180,116 @@
     observer.observe(el);
   });
 })();
+
+
+// ── About gallery viewer (portraits + family) ───
+(function () {
+  const modal = document.getElementById('gallery-modal');
+  const items = Array.from(document.querySelectorAll('main img'));
+  if (!items.length || !modal) return;
+
+  const modalImage = document.getElementById('gallery-modal-image');
+  const caption = document.getElementById('gallery-caption');
+  const prevBtn = document.getElementById('gallery-prev');
+  const nextBtn = document.getElementById('gallery-next');
+  const zoomInBtn = document.getElementById('gallery-zoom-in');
+  const zoomOutBtn = document.getElementById('gallery-zoom-out');
+  const closeTargets = modal.querySelectorAll('[data-gallery-close]');
+
+  let currentIndex = 0;
+  let zoom = 1;
+  let touchStartX = 0;
+  const swipeThreshold = 40;
+
+  function applyZoom() {
+    modalImage.style.transform = 'scale(' + zoom.toFixed(2) + ')';
+  }
+
+  function renderModal() {
+    const current = items[currentIndex];
+    modalImage.src = current.getAttribute('src') || '';
+    modalImage.alt = current.getAttribute('alt') || '';
+    caption.textContent = current.dataset.galleryLabel || current.getAttribute('alt') || '';
+    applyZoom();
+  }
+
+  function openModal(index) {
+    currentIndex = index;
+    zoom = 1;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    renderModal();
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % items.length;
+    zoom = 1;
+    renderModal();
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    zoom = 1;
+    renderModal();
+  }
+
+  items.forEach((item, idx) => {
+    item.style.cursor = 'zoom-in';
+    item.addEventListener('click', () => openModal(idx));
+  });
+
+  prevBtn.addEventListener('click', prevImage);
+  nextBtn.addEventListener('click', nextImage);
+
+  zoomInBtn.addEventListener('click', () => {
+    zoom = Math.min(zoom + 0.2, 3);
+    applyZoom();
+  });
+
+  zoomOutBtn.addEventListener('click', () => {
+    zoom = Math.max(zoom - 0.2, 1);
+    applyZoom();
+  });
+
+  modalImage.addEventListener('dblclick', () => {
+    zoom = zoom < 1.8 ? 2 : 1;
+    applyZoom();
+  });
+
+  modalImage.addEventListener('wheel', (event) => {
+    event.preventDefault();
+    const delta = event.deltaY > 0 ? -0.15 : 0.15;
+    zoom = Math.max(1, Math.min(3, zoom + delta));
+    applyZoom();
+  }, { passive: false });
+
+  modalImage.addEventListener('touchstart', (event) => {
+    touchStartX = event.changedTouches[0].clientX;
+  }, { passive: true });
+
+  modalImage.addEventListener('touchend', (event) => {
+    const touchEndX = event.changedTouches[0].clientX;
+    const distance = touchEndX - touchStartX;
+    if (Math.abs(distance) < swipeThreshold) return;
+    if (distance < 0) nextImage();
+    if (distance > 0) prevImage();
+  }, { passive: true });
+
+  closeTargets.forEach((el) => {
+    el.addEventListener('click', closeModal);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (!modal.classList.contains('open')) return;
+    if (event.key === 'Escape') closeModal();
+    if (event.key === 'ArrowRight') nextImage();
+    if (event.key === 'ArrowLeft') prevImage();
+  });
+})();
