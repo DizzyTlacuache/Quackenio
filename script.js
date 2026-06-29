@@ -56,6 +56,160 @@
   }, { capture: true });
 })();
 
+
+// ── Accessibility: Quackquackence mode ──────────
+(function () {
+  const STORAGE_KEY = 'quackenio_quackquackence_mode';
+  const EXCLUDED_SELECTOR = 'script, style, noscript, code, pre, textarea, input, select, option';
+  let quackModeEnabled = false;
+
+  function preserveWordCase(original, translated) {
+    if (original === original.toUpperCase()) return translated.toUpperCase();
+    if (original[0] === original[0].toUpperCase()) {
+      return translated.charAt(0).toUpperCase() + translated.slice(1);
+    }
+    return translated;
+  }
+
+  function quackifyWord(word) {
+    return preserveWordCase(word, 'quack');
+  }
+
+  function quackifyText(text) {
+    return text.replace(/[A-Za-zÀ-ÿ]+/g, (word) => quackifyWord(word));
+  }
+
+  function getTranslatableTextNodes() {
+    const nodes = [];
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode(node) {
+        if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        const parent = node.parentElement;
+        if (!parent) return NodeFilter.FILTER_REJECT;
+        if (parent.closest(EXCLUDED_SELECTOR)) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+
+    let current = walker.nextNode();
+    while (current) {
+      nodes.push(current);
+      current = walker.nextNode();
+    }
+    return nodes;
+  }
+
+  function applyQuackMode() {
+    getTranslatableTextNodes().forEach((node) => {
+      if (node.__quackOriginalText === undefined) {
+        node.__quackOriginalText = node.nodeValue;
+      }
+      node.nodeValue = quackifyText(node.__quackOriginalText);
+    });
+
+    const translatableAttributes = ['placeholder', 'aria-label', 'title', 'alt'];
+    document.querySelectorAll('*').forEach((el) => {
+      if (el.closest(EXCLUDED_SELECTOR)) return;
+
+      translatableAttributes.forEach((attr) => {
+        if (!el.hasAttribute(attr)) return;
+
+        const key = '__quackOriginalAttr_' + attr;
+        if (el[key] === undefined) {
+          el[key] = el.getAttribute(attr);
+        }
+        el.setAttribute(attr, quackifyText(el[key]));
+      });
+    });
+  }
+
+  function restoreOriginalLanguage() {
+    getTranslatableTextNodes().forEach((node) => {
+      if (node.__quackOriginalText !== undefined) {
+        node.nodeValue = node.__quackOriginalText;
+      }
+    });
+
+    const translatableAttributes = ['placeholder', 'aria-label', 'title', 'alt'];
+    document.querySelectorAll('*').forEach((el) => {
+      translatableAttributes.forEach((attr) => {
+        const key = '__quackOriginalAttr_' + attr;
+        if (el[key] !== undefined) {
+          el.setAttribute(attr, el[key]);
+        }
+      });
+    });
+  }
+
+  function injectToggleStyles() {
+    if (document.getElementById('quack-language-toggle-styles')) return;
+
+    const style = document.createElement('style');
+    style.id = 'quack-language-toggle-styles';
+    style.textContent = `
+      .quack-language-toggle {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 2100;
+        border: 1px solid rgba(255, 214, 0, 0.45);
+        background: #111;
+        color: #FFD600;
+        border-radius: 999px;
+        padding: 0.65rem 0.95rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        cursor: pointer;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+      }
+      .quack-language-toggle[aria-pressed="true"] {
+        background: #FFD600;
+        color: #111;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  function setToggleLabel(button) {
+    button.textContent = quackModeEnabled
+      ? 'QUACK QUACK'
+      : 'Quackquackence: OFF';
+    button.setAttribute('aria-pressed', String(quackModeEnabled));
+  }
+
+  function createToggleButton() {
+    injectToggleStyles();
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'quack-language-toggle';
+    button.setAttribute('aria-label', 'Activar o desactivar traduccion a Quackquackence');
+    document.body.appendChild(button);
+
+    button.addEventListener('click', () => {
+      quackModeEnabled = !quackModeEnabled;
+      localStorage.setItem(STORAGE_KEY, quackModeEnabled ? 'on' : 'off');
+
+      if (quackModeEnabled) {
+        applyQuackMode();
+      } else {
+        restoreOriginalLanguage();
+      }
+      setToggleLabel(button);
+    });
+
+    return button;
+  }
+
+  const button = createToggleButton();
+  quackModeEnabled = localStorage.getItem(STORAGE_KEY) === 'on';
+  if (quackModeEnabled) {
+    applyQuackMode();
+  }
+  setToggleLabel(button);
+})();
+
 // ── Hamburger menu toggle ──────────────────────
 (function () {
   const hamburger = document.querySelector('.hamburger');
