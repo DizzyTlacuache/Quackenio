@@ -5,15 +5,19 @@ Quackenio is a static website for a coffee brand with three main pages: home, me
 ## Project Structure
 
 - `index.html`: landing page with brand presentation, specialties, and evaluation call to action.
+- `news.html`: dedicated news page that lists all published posts.
 - `menu.html`: menu page with hot coffee, pour over, and cold brew sections.
 - `contact.html`: contact page with business info, hours, and a client-side contact form.
 - `styles.css`: shared styles, layout, typography, responsive behavior, and visual theme.
-- `script.js`: mobile navigation, active link state, navbar scroll effect, reveal animations, and contact form validation.
+- `script.js`: mobile navigation, active link state, navbar scroll effect, reveal animations, contact form validation, and reusable news post rendering.
+- `news/news-data.js`: single source of truth for news posts rendered on homepage and news page.
 
 ## Features
 
 - Responsive navigation with hamburger menu
 - Shared visual identity across all pages
+- Dedicated news section plus full news archive page
+- Reusable news post-card pattern driven by `news/news-data.js`
 - Menu presentation by category
 - Contact form validation in the browser
 - Scroll-based reveal animations

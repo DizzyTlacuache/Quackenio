@@ -20,6 +20,7 @@
       </button>
       <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
+        <li><a href="news.html">Noticias</a></li>
         <li><a href="about.html">Acerca de</a></li>
         <li><a href="menu.html">Menu</a></li>
         <li><a href="contact.html">Con-quack-tanos</a></li>
@@ -34,6 +35,7 @@
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
       <a href="menu.html" class="btn btn-primary">Ver Menu</a>
       <a href="about.html" class="btn btn-outline">Conoce la his-pato-ria</a>
+      <a href="#news" class="btn btn-outline">Ver Noticias</a>
       <a href="contact.html" class="btn btn-outline">Con-quack-tanos</a>
     </div>
   </header>
@@ -106,6 +108,41 @@
       </div>
     </section>
 
+    <section class="section news-section" id="news" aria-labelledby="news-title">
+      <div class="container">
+        <h2 class="section-title" id="news-title">ULTIMAS <em>NOTICIAS</em></h2>
+        <span class="section-divider"></span>
+        <p class="section-subtitle">Promociones, anuncios y novedades recien salidas de la barra.</p>
+
+        <div class="news-grid" id="news-featured">
+          <article class="news-post-card" aria-label="Promocion Mexico vs Ecuador">
+            <div class="news-media-wrap">
+              <img
+                src="news/300626promo_mexico_ecuador.jpeg"
+                alt="Promocion Quackenio por el partido Mexico vs Ecuador"
+                class="news-media"
+                data-gallery-item
+                data-gallery-label="Promo especial: Mexico vs Ecuador"
+                loading="lazy"
+              />
+            </div>
+            <div class="news-content">
+              <p class="news-meta">1 Jul 2026 | Promociones</p>
+              <h3>Promo especial: Mexico vs Ecuador</h3>
+              <p>
+                México invicto: una promocion especial por el
+                partido Mexico vs Ecuador. Ven por tu cafe y dí quack. 
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="news-actions">
+          <a href="news.html" class="btn btn-outline">Ver todas las noticias</a>
+        </div>
+      </div>
+    </section>
+
     <section class="eval-banner" aria-label="Portal de evaluacion">
       <h2>Como estuvo tu experiencia?</h2>
       <p>Tu opinion nos ayuda a seguir mejorando. Cuack-nsulta rapida: menos de 2 minutos.</p>
@@ -121,6 +158,22 @@
     <p>&copy; 2026 Quackenio. Todos los derechos reservados.</p>
   </footer>
 
+  <div class="gallery-modal" id="gallery-modal" aria-hidden="true" role="dialog" aria-label="Visor de imagenes">
+    <div class="gallery-backdrop" data-gallery-close></div>
+    <div class="gallery-panel">
+      <button type="button" class="gallery-close" data-gallery-close aria-label="Cerrar visor">×</button>
+      <img src="" alt="" class="gallery-modal-image" id="gallery-modal-image" />
+      <p class="gallery-caption" id="gallery-caption"></p>
+      <div class="gallery-controls">
+        <button type="button" class="gallery-btn" id="gallery-prev">Anterior</button>
+        <button type="button" class="gallery-btn" id="gallery-zoom-in">Zoom +</button>
+        <button type="button" class="gallery-btn" id="gallery-zoom-out">Zoom -</button>
+        <button type="button" class="gallery-btn" id="gallery-next">Siguiente</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="news/news-data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -403,6 +403,105 @@ body {
   font-size: 0.95rem;
 }
 
+/* ---------- News Section ---------- */
+.news-section {
+  background: var(--dark);
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.news-feed-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.news-post-card,
+.news-card {
+  background: var(--dark-card);
+  border: 1px solid rgba(255, 214, 0, 0.15);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(260px, 420px) 1fr;
+  align-items: start;
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.news-post-card:hover,
+.news-card:hover {
+  border-color: rgba(255, 214, 0, 0.4);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.35);
+  transform: translateY(-3px);
+}
+
+.news-media-wrap {
+  background: #101010;
+  border-right: 1px solid rgba(255, 214, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-media {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  display: block;
+  cursor: zoom-in;
+}
+
+.news-content {
+  padding: 1.6rem 1.8rem;
+}
+
+.news-meta {
+  color: var(--yellow);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.news-content h3 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.85rem;
+  color: var(--white);
+}
+
+.news-content p {
+  color: var(--gray);
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+.news-actions {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.news-empty {
+  background: rgba(255, 214, 0, 0.04);
+  border: 1px dashed rgba(255, 214, 0, 0.35);
+  color: var(--gray);
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.news-archive {
+  background: var(--black);
+}
+
 /* ---------- Menu Page ---------- */
 .page-hero {
   background: var(--dark);
@@ -743,6 +842,24 @@ footer .footer-tagline {
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .news-card {
+    grid-template-columns: 1fr;
+  }
+
+  .news-post-card,
+  .news-card {
+    grid-template-columns: 1fr;
+  }
+
+  .news-media-wrap {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 214, 0, 0.1);
+  }
+
+  .news-feed-grid {
+    grid-template-columns: 1fr;
   }
 
   .hero { padding: 5rem 1.5rem 4rem; }

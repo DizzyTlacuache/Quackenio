@@ -246,6 +246,82 @@
 })();
 
 
+// ── News cards renderer (homepage + news page) ──
+(function () {
+  const featuredContainer = document.getElementById('news-featured');
+  const archiveContainer = document.getElementById('news-feed');
+  if (!featuredContainer && !archiveContainer) return;
+
+  const newsPosts = Array.isArray(window.QUACKENIO_NEWS)
+    ? window.QUACKENIO_NEWS.slice()
+    : [];
+
+  if (!newsPosts.length) {
+    const emptyMarkup = '<p class="news-empty">Aun no hay noticias publicadas.</p>';
+    if (featuredContainer) featuredContainer.innerHTML = emptyMarkup;
+    if (archiveContainer) archiveContainer.innerHTML = emptyMarkup;
+    return;
+  }
+
+  const monthNames = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+
+  function escapeHtml(text) {
+    return String(text || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/\"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function formatDate(dateIso) {
+    const date = new Date(dateIso + 'T00:00:00');
+    if (Number.isNaN(date.getTime())) return 'Fecha por confirmar';
+
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = monthNames[date.getMonth()] || '---';
+    const year = date.getFullYear();
+    return day + ' ' + month + ' ' + year;
+  }
+
+  function renderPostCard(post) {
+    const title = escapeHtml(post.title || 'Nueva publicacion');
+    const category = escapeHtml(post.category || 'Noticias');
+    const excerpt = escapeHtml(post.excerpt || 'Nueva noticia disponible en Quackenio.');
+    const image = escapeHtml(post.image || 'news/300626promo_mexico_ecuador.jpeg');
+    const imageAlt = escapeHtml(post.imageAlt || title);
+    const meta = formatDate(post.date || '');
+
+    return `
+      <article class="news-post-card" aria-label="${title}">
+        <div class="news-media-wrap">
+          <img src="${image}" alt="${imageAlt}" class="news-media" data-gallery-item data-gallery-label="${title}" loading="lazy" />
+        </div>
+        <div class="news-content">
+          <p class="news-meta">${meta} | ${category}</p>
+          <h3>${title}</h3>
+          <p>${excerpt}</p>
+        </div>
+      </article>
+    `;
+  }
+
+  const sortedPosts = newsPosts.sort((a, b) => {
+    const aTime = new Date(a.date || '').getTime();
+    const bTime = new Date(b.date || '').getTime();
+    return bTime - aTime;
+  });
+
+  if (featuredContainer) {
+    featuredContainer.innerHTML = renderPostCard(sortedPosts[0]);
+  }
+
+  if (archiveContainer) {
+    archiveContainer.innerHTML = sortedPosts.map(renderPostCard).join('');
+  }
+})();
+
+
 // ── Navbar scroll shadow ───────────────────────
 (function () {
   const navbar = document.querySelector('.navbar');
@@ -339,7 +415,7 @@
 // ── About gallery viewer (portraits + family) ───
 (function () {
   const modal = document.getElementById('gallery-modal');
-  const items = Array.from(document.querySelectorAll('main img'));
+  const items = Array.from(document.querySelectorAll('[data-gallery-item]'));
   if (!items.length || !modal) return;
 
   const modalImage = document.getElementById('gallery-modal-image');
