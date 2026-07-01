@@ -11,6 +11,6 @@ window.QUACKENIO_NEWS = [
     image: "news/010726promo_mexico_ecuador.jpeg",
     imageAlt: "Promocion Quackenio por el partido Mexico vs Ecuador",
     excerpt:
-      "México invicto: una promocion especial por el partido Mexico vs Ecuador. Ven por tu cafe y dí quack."
+      "Esta es una promoción especial por el partido México vs Ecuador. Ven por tu café y di quack."
   }
 ];
