@@ -12,5 +12,15 @@ window.QUACKENIO_NEWS = [
     imageAlt: "Promocion Quackenio por el partido Mexico vs Ecuador",
     excerpt:
       "Esta es una promoción especial por el partido México vs Ecuador. Ven por tu café y di quack."
+  },
+  {
+    id: "2026-07-02-cuack-invasion",
+    date: "2026-07-02",
+    title: "Cuack Invasión",
+    category: "Noticias",
+    image: "news/020726_invasion.jpeg",
+    imageAlt: "Actual Cuack Invasión",
+    excerpt:
+      "Ven al domo, justo fuera de la cafeteria, y vive la invasión quackenio."
   }
 ];
