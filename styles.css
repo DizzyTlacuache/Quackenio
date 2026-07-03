@@ -335,19 +335,21 @@ body {
 .about-image-placeholder {
   background: var(--dark-card);
   height: 340px;
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: var(--yellow);
-  font-size: 5rem;
+  padding: 1.25rem;
   gap: 1rem;
 }
 
 .about-image img {
-  width: 100%;
+  width: auto;
+  max-width: 72%;
+  max-height: 240px;
   height: auto;
-  object-fit: unset; /* ya no hace falta */
+  object-fit: contain;
   display: block;
 }
 
