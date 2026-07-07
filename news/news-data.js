@@ -28,7 +28,7 @@ window.QUACKENIO_NEWS = [
     date: "2026-07-07",
     title: "Cuack Abandonado",
     category: "Noticias",
-    image: "news/070726_abandonado.jpeg",
+    image: "news/070726_abandonado.png",
     imageAlt: "Cuack Abandonado",
     excerpt:
       "Orlando a abandonado el nido. Quackenio permanece temporalmente sin su líder. Ven a la cafetería y di quack para recibir nada."
