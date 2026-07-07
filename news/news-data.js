@@ -22,5 +22,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "Actual Cuack Invasión",
     excerpt:
       "Ven al domo, justo fuera de la cafeteria, y vive la invasión quackenio."
+  },
+  {
+    id: "2026-07-07-cuack-abandoned",
+    date: "2026-07-07",
+    title: "Cuack Abandonado",
+    category: "Noticias",
+    image: "news/070726_abandonado.jpeg",
+    imageAlt: "Cuack Abandonado",
+    excerpt:
+      "Orlando a abandonado el nido. Quackenio permanece temporalmente sin su líder. Ven a la cafetería y di quack para recibir nada."
   }
 ];
+    
