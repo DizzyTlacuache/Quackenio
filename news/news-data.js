@@ -33,16 +33,25 @@ window.QUACKENIO_NEWS = [
     excerpt:
       "Orlando ha abandonado el nido. Quackenio permanece temporalmente sin su líder. Ven a la cafetería y di quack para recibir nada."
   },
-  
   {
-    id: "2026-07-10-vacaciones-resurgimiento-quackenio",
-    date: "2026-07-10",
+    id: "2026-07-09-vacaciones-resurgimiento-quackenio",
+    date: "2026-07-09",
     title: "Resurgimiento de vacaciones",
     category: "Noticias",
-    image: "news/100726_vacas_quackenio.jpeg",
+    image: "news/090726_vacas_quackenio.jpeg",
     imageAlt: "Resurgimiento de Quackenio con tema de vacaciones",
     excerpt:
       "Lo que se había quedado abandonado empieza a resurgir con modo vacaciones. Quackenio vuelve con energía de verano y sigue el cuack."
+  },
+  {
+    id: "2026-07-10-certificado",
+    date: "2026-07-10",
+    title: "Certificado de Coffe Lovers",
+    category: "Noticias",
+    image: "news/100726_certificado.png",
+    imageAlt: "Certificado de Coffe Lovers",
+    excerpt:
+      "Nuevo certificado de honest coffee lover: cada cuack cuenta y cada sorbo también. Quackenio premia el amor por el café con un toque muy cuack."
   }
 ];
     
