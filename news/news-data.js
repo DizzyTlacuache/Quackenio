@@ -31,7 +31,7 @@ window.QUACKENIO_NEWS = [
     image: "news/070726_abandonado.png",
     imageAlt: "Cuack Abandonado",
     excerpt:
-      "Orlando a abandonado el nido. Quackenio permanece temporalmente sin su líder. Ven a la cafetería y di quack para recibir nada."
+      "Orlando ha abandonado el nido. Quackenio permanece temporalmente sin su líder. Ven a la cafetería y di quack para recibir nada."
   },
   
   {
