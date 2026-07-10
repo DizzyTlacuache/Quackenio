@@ -32,6 +32,17 @@ window.QUACKENIO_NEWS = [
     imageAlt: "Cuack Abandonado",
     excerpt:
       "Orlando a abandonado el nido. Quackenio permanece temporalmente sin su líder. Ven a la cafetería y di quack para recibir nada."
+  },
+  
+  {
+    id: "2026-07-10-vacaciones-resurgimiento-quackenio",
+    date: "2026-07-10",
+    title: "Resurgimiento de vacaciones",
+    category: "Noticias",
+    image: "news/100726_vacas_quackenio.jpeg",
+    imageAlt: "Resurgimiento de Quackenio con tema de vacaciones",
+    excerpt:
+      "Lo que se había quedado abandonado empieza a resurgir con modo vacaciones. Quackenio vuelve con energía de verano y sigue el cuack."
   }
 ];
     
