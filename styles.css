@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&family=Lilita+One&family=Barlow+Condensed:wght@400;500;700&display=swap');
 
 /* ================================================
    QUACKENIO — Stylesheet
@@ -196,7 +196,9 @@ body {
 
 /* ---------- Hero ---------- */
 .hero {
-  background: var(--black);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.55)),
+    url('images/background.png') center center / cover no-repeat;
   color: var(--white);
   text-align: center;
   padding: 7rem 1.5rem 6rem;
@@ -346,8 +348,8 @@ body {
 
 .about-image img {
   width: auto;
-  max-width: 72%;
-  max-height: 240px;
+  max-width: 84%;
+  max-height: 84%;
   height: auto;
   object-fit: contain;
   display: block;
@@ -1219,5 +1221,331 @@ footer .footer-tagline {
   .training-steps {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+}
+
+/* ---------- Seasonal Theme: Tropical Beach ---------- */
+:root {
+  --black: #0d5d66;
+  --dark: #0b7f87;
+  --dark-card: #fff4cc;
+  --yellow: #f7c948;
+  --yellow-hover: #eab934;
+  --orange: #f08a24;
+  --white: #14363d;
+  --gray: #386168;
+  --light-bg: #fff7de;
+
+  --bg: #7adce4;
+  --bg-section: #ffeeb7;
+  --bg-alt: #fff4cf;
+  --text: #14363d;
+  --text-muted: #456e74;
+  --accent: #f08a24;
+  --shadow: rgba(11, 67, 74, 0.25);
+
+  --font-heading: 'Lilita One', 'Bebas Neue', sans-serif;
+  --font-body: 'Barlow Condensed', 'Inter', sans-serif;
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(120, 205, 115, 0.18) 0 8%, transparent 9%),
+    radial-gradient(circle at 88% 8%, rgba(120, 205, 115, 0.18) 0 8%, transparent 9%),
+    linear-gradient(180deg, #8ae6ee 0%, #3fcad8 38%, #38b4bf 56%, #f5dc8b 57%, #f2cf72 100%);
+  color: var(--text);
+}
+
+.navbar {
+  background: rgba(248, 237, 191, 0.95);
+  border-bottom: 3px solid #e69d2d;
+  box-shadow: 0 10px 24px rgba(15, 88, 98, 0.18);
+  backdrop-filter: blur(7px);
+}
+
+.navbar .container {
+  background: rgba(255, 247, 221, 0.75);
+  border-radius: 999px;
+  margin: 0.4rem auto;
+  height: 56px;
+  padding: 0 1.25rem;
+}
+
+.navbar-brand {
+  color: #0e4e57;
+  letter-spacing: 0.04em;
+}
+
+.navbar-brand span {
+  color: #e67f1f;
+}
+
+.nav-links a {
+  color: #0f4f59;
+  font-size: 0.96rem;
+  letter-spacing: 0.05em;
+}
+
+.nav-links a::after {
+  height: 3px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #f08a24, #f7c948);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #e4761a;
+}
+
+.hamburger span {
+  background: #e67f1f;
+}
+
+.hero {
+  padding: 8rem 1.5rem 8.5rem;
+  background:
+    linear-gradient(180deg, rgba(9, 56, 63, 0.34) 0%, rgba(9, 56, 63, 0.45) 52%, rgba(18, 78, 86, 0.56) 100%),
+    url('images/background.png') center center / cover no-repeat;
+  color: #fff7df;
+}
+
+.hero::before {
+  top: -12%;
+  width: min(1000px, 95vw);
+  height: 760px;
+  background:
+    radial-gradient(circle at 50% 26%, rgba(255, 232, 141, 0.45) 0 18%, rgba(255, 232, 141, 0) 32%),
+    radial-gradient(ellipse at 12% 8%, rgba(83, 142, 62, 0.32) 0 18%, transparent 30%),
+    radial-gradient(ellipse at 88% 8%, rgba(83, 142, 62, 0.32) 0 18%, transparent 30%);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 -2px;
+  height: 78px;
+  background:
+    radial-gradient(circle at 18px -4px, #f9f5df 16px, transparent 17px) 0 0/72px 100% repeat-x,
+    linear-gradient(180deg, transparent 0%, rgba(249, 245, 223, 0.94) 30%, rgba(249, 245, 223, 1) 100%);
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  color: #fff7d9;
+  text-shadow: 0 3px 10px rgba(13, 57, 66, 0.35);
+}
+
+.hero h1 {
+  color: #fff9e8;
+  letter-spacing: 0.04em;
+  text-shadow: 0 6px 22px rgba(10, 55, 63, 0.45);
+}
+
+.hero h1 em {
+  color: #ffd967;
+  text-shadow: 0 8px 20px rgba(240, 138, 36, 0.45);
+}
+
+.hero-tagline {
+  color: #fff2c8;
+  font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+  font-style: normal;
+}
+
+.section-title {
+  color: #0f4a53;
+  letter-spacing: 0.03em;
+}
+
+.section-title em {
+  color: #e87a1f;
+}
+
+.section-subtitle {
+  color: #3f6a71;
+}
+
+.section-divider {
+  width: 88px;
+  height: 5px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #f08a24, #f7c948);
+}
+
+.btn {
+  border-radius: 999px;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #f08a24, #f7c948);
+  border-color: #e68b27;
+  color: #14363d;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #e67f1f, #f3c23d);
+  border-color: #dc7b1f;
+  box-shadow: 0 10px 24px rgba(238, 140, 43, 0.35);
+}
+
+.btn-outline {
+  background: rgba(255, 248, 223, 0.8);
+  border-color: rgba(14, 93, 102, 0.35);
+  color: #0f4f59;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(14, 93, 102, 0.56);
+}
+
+.about,
+.news-section,
+.news-archive,
+.menu-section,
+.menu-section:nth-child(even),
+.page-hero,
+footer {
+  background: linear-gradient(180deg, rgba(255, 245, 210, 0.98) 0%, rgba(250, 233, 179, 0.96) 100%);
+}
+
+.page-hero {
+  border-bottom: 3px solid rgba(230, 134, 34, 0.4);
+}
+
+.page-hero p {
+  color: #3f6970;
+}
+
+.about-text p,
+.news-content p,
+.info-block p,
+.story-text p,
+.training-step p,
+.story-closing,
+.menu-item-info p,
+.hours-grid,
+.gallery-caption {
+  color: #2f5961;
+}
+
+.about-image,
+.contact-form-wrapper,
+.news-post-card,
+.news-card,
+.menu-item,
+.founder-card,
+.training-step {
+  background: #fff7dd;
+  border: 1px solid rgba(16, 95, 105, 0.2);
+  box-shadow: 0 14px 26px rgba(15, 90, 99, 0.12);
+}
+
+.cards-grid {
+  gap: 2.3rem;
+}
+
+.card {
+  background: #ffefbe;
+  border: 2px solid rgba(19, 97, 106, 0.26);
+  border-radius: 26px;
+  overflow: visible;
+  padding: 1.2rem 1.1rem 1.4rem;
+}
+
+.card:hover {
+  border-color: #e67f1f;
+  box-shadow: 0 16px 30px rgba(13, 94, 102, 0.2);
+}
+
+.card-icon {
+  width: min(220px, 76%);
+  aspect-ratio: 1;
+  height: auto;
+  margin: -2.2rem auto 0.8rem;
+  border-radius: 999px;
+  border: 5px solid #3a9f8c;
+  background: linear-gradient(180deg, #fffde8 0%, #f5df98 100%);
+  box-shadow: 0 10px 24px rgba(14, 95, 104, 0.16);
+}
+
+.card-icon img {
+  object-fit: contain;
+  width: 84%;
+  height: 84%;
+}
+
+.card-body {
+  text-align: center;
+  padding: 0.7rem 0.85rem 0.3rem;
+}
+
+.card-body h3,
+.news-content h3,
+.contact-info h2,
+.category-header h2,
+.founder-caption h3,
+.training-step h3,
+.story-quote {
+  color: #0f4d56;
+}
+
+.news-media-wrap,
+.gallery-panel,
+.founder-portrait-wrap {
+  background: #ebfbfd;
+  border-color: rgba(18, 103, 112, 0.2);
+}
+
+.news-meta,
+.info-block h3,
+.menu-item-price {
+  color: #e6781a;
+}
+
+.eval-banner {
+  background:
+    linear-gradient(180deg, rgba(76, 203, 205, 0.94) 0%, rgba(70, 180, 188, 0.94) 50%, rgba(240, 194, 94, 0.96) 100%);
+  color: #103a42;
+}
+
+.btn-dark {
+  background: #0e5d66;
+  border-color: #0e5d66;
+  color: #ffe08d;
+}
+
+footer {
+  border-top: 3px solid rgba(230, 134, 34, 0.32);
+}
+
+footer .footer-brand {
+  color: #e67b1f;
+}
+
+footer .footer-tagline,
+footer p {
+  color: #355e66;
+}
+
+@media (max-width: 768px) {
+  .navbar .container {
+    border-radius: 0;
+    margin: 0;
+    height: 64px;
+    background: transparent;
+  }
+
+  .nav-links {
+    background: rgba(255, 246, 220, 0.98);
+    border-top: 2px solid rgba(230, 127, 31, 0.32);
+  }
+
+  .hero {
+    padding: 5.2rem 1.1rem 6rem;
+  }
+
+  .card-icon {
+    width: min(200px, 80%);
   }
 }
