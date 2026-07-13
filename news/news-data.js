@@ -52,6 +52,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "Certificado de Coffe Lovers",
     excerpt:
       "Nuevo certificado de honest coffee lover: cada cuack cuenta y cada sorbo también. Quackenio premia el amor por el café con un toque muy cuack."
+  },
+  {
+    id: "2026-07-13-vacaciones",
+    date: "2026-07-13",
+    title: "Vacaciones en Quackenio",
+    category: "Noticias",
+    image: "news/130726_new_vacas.png",
+    imageAlt: "Vacaciones en Quackenio",
+    excerpt:
+      "New phone, who dis? Somos Quackenio en modo vacaciones: ven por tu cafecito, échate un cuack y deja que estos patos te arreglen el día a puro aleteo y buena vibra."
   }
 ];
     
