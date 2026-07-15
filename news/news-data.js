@@ -62,6 +62,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "Vacaciones en Quackenio",
     excerpt:
       "New phone, who dis? Somos Quackenio en modo vacaciones: ven por tu cafecito, échate un cuack y deja que estos patos te arreglen el día a puro aleteo y buena vibra."
+  },
+  {
+    id: "2026-07-15-burritos",
+    date: "2026-07-15",
+    title: "Burritos y Cuack",
+    category: "Noticias",
+    image: "news/150726_burritos.png",
+    imageAlt: "Burritos y Cuack",
+    excerpt:
+      "¡Promo del día en Quackenio! Pide tus burritos, acompáñalos con cafecito y suelta un cuack en caja para activarla. Están tan buenos que hasta los patos hacen fila en formación de V."
   }
 ];
     
