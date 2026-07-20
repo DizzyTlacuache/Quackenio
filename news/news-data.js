@@ -72,6 +72,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "Burritos y Cuack",
     excerpt:
       "¡Promo del día en Quackenio! Pide tus burritos, acompáñalos con cafecito y suelta un cuack en caja para activarla. Están tan buenos que hasta los patos hacen fila en formación de V."
+  },
+  {
+    id: "2026-07-20-leonidas",
+    date: "2026-07-20",
+    title: "Orlando regresa",
+    category: "Noticias",
+    image: "news/200726_leonidas.png",
+    imageAlt: "Orlando regresa",
+    excerpt:
+      "And the boy returns... as a king! our king! the king of the ducks! Orlando regresa a Quackenio y trae consigo la energía de los patos para que todos puedan disfrutar de un buen café y un cuack."
   }
 ];
     
