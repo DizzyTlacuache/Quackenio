@@ -1263,10 +1263,19 @@ body {
   bottom: clamp(10px, 2.8vh, 24px);
   width: 88px;
   height: 54px;
-  pointer-events: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  pointer-events: auto;
+  cursor: pointer;
   z-index: 1900;
   animation: duck-run-across 15s linear infinite;
   filter: drop-shadow(0 6px 12px rgba(14, 70, 78, 0.32));
+}
+
+.duck-runner:focus-visible {
+  outline: 2px solid #0f4f59;
+  outline-offset: 3px;
 }
 
 .duck-runner-duck {

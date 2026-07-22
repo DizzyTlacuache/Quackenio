@@ -5,9 +5,6 @@
 // ── Duck SFX on buttons and tabs ────────────────
 (function () {
   const clickableSelector = '.btn, button, .nav-links a';
-  const clickableTargets = document.querySelectorAll(clickableSelector);
-  if (!clickableTargets.length) return;
-
   const quackSrc = 'audio/quack_duck_sound.mp3';
   const quackVariations = [0.92, 1.0, 1.08, 1.15];
 
@@ -33,6 +30,8 @@
       // Ignore audio errors to avoid breaking interactions.
     }
   }
+
+  //window.quackenioPlayQuack = playQuack;
 
   document.addEventListener('pointerdown', (event) => {
     const target = event.target.closest(clickableSelector);
@@ -62,9 +61,11 @@
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   if (document.querySelector('.duck-runner')) return;
 
-  const duckRunner = document.createElement('div');
+  const duckRunner = document.createElement('button');
+  duckRunner.type = 'button';
   duckRunner.className = 'duck-runner';
-  duckRunner.setAttribute('aria-hidden', 'true');
+  duckRunner.setAttribute('aria-label', 'Escuchar cuack');
+  duckRunner.setAttribute('title', 'Haz clic para escuchar un cuack');
 
   duckRunner.innerHTML = `
     <span class="duck-runner-duck">
@@ -74,6 +75,12 @@
       <span class="duck-runner-leg duck-runner-leg--back"></span>
     </span>
   `;
+
+  duckRunner.addEventListener('pointerdown', () => {
+    if (typeof window.quackenioPlayQuack === 'function') {
+      window.quackenioPlayQuack();
+    }
+  });
 
   document.body.appendChild(duckRunner);
 })();
