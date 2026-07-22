@@ -1256,6 +1256,148 @@ body {
   color: var(--text);
 }
 
+/* Decorative running duck (site-wide) */
+.duck-runner {
+  position: fixed;
+  left: -130px;
+  bottom: clamp(10px, 2.8vh, 24px);
+  width: 88px;
+  height: 54px;
+  pointer-events: none;
+  z-index: 1900;
+  animation: duck-run-across 15s linear infinite;
+  filter: drop-shadow(0 6px 12px rgba(14, 70, 78, 0.32));
+}
+
+.duck-runner-duck {
+  position: absolute;
+  left: 10px;
+  bottom: 12px;
+  width: 56px;
+  height: 31px;
+  background: #ffdb72;
+  border: 2px solid #0f4f59;
+  border-radius: 24px 24px 18px 20px;
+  animation: duck-body-bob 0.33s steps(2, end) infinite;
+}
+
+.duck-runner-duck::before {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: -13px;
+  width: 23px;
+  height: 23px;
+  background: #ffe793;
+  border: 2px solid #0f4f59;
+  border-radius: 50%;
+}
+
+.duck-runner-duck::after {
+  content: '';
+  position: absolute;
+  right: -18px;
+  top: -5px;
+  width: 14px;
+  height: 9px;
+  background: #f08a24;
+  border: 2px solid #0f4f59;
+  border-left: 0;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.duck-runner-eye {
+  position: absolute;
+  right: 3px;
+  top: -5px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #0f4f59;
+}
+
+.duck-runner-wing {
+  position: absolute;
+  left: 20px;
+  top: 9px;
+  width: 18px;
+  height: 12px;
+  border: 2px solid rgba(15, 79, 89, 0.72);
+  border-radius: 14px 14px 10px 10px;
+  border-top: 0;
+}
+
+.duck-runner-leg {
+  position: absolute;
+  bottom: -10px;
+  width: 3px;
+  height: 13px;
+  background: #0f4f59;
+  transform-origin: top center;
+}
+
+.duck-runner-leg::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  bottom: -2px;
+  width: 8px;
+  height: 3px;
+  border-radius: 3px;
+  background: #f08a24;
+}
+
+.duck-runner-leg--front {
+  left: 19px;
+  animation: duck-leg-front 0.22s linear infinite;
+}
+
+.duck-runner-leg--back {
+  left: 34px;
+  animation: duck-leg-back 0.22s linear infinite;
+}
+
+@keyframes duck-run-across {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(100vw + 180px)); }
+}
+
+@keyframes duck-body-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes duck-leg-front {
+  0% { transform: rotate(22deg); }
+  50% { transform: rotate(-24deg); }
+  100% { transform: rotate(22deg); }
+}
+
+@keyframes duck-leg-back {
+  0% { transform: rotate(-24deg); }
+  50% { transform: rotate(22deg); }
+  100% { transform: rotate(-24deg); }
+}
+
+@media (max-width: 768px) {
+  .duck-runner {
+    width: 74px;
+    height: 46px;
+    bottom: 8px;
+  }
+
+  .duck-runner-duck {
+    transform: scale(0.86);
+    transform-origin: left bottom;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .duck-runner {
+    display: none;
+  }
+}
+
 .navbar {
   background: rgba(248, 237, 191, 0.95);
   border-bottom: 3px solid #e69d2d;

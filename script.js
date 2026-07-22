@@ -56,6 +56,28 @@
   }, { capture: true });
 })();
 
+// ── Decorative: running duck across the viewport ─
+(function () {
+  if (!document.body) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (document.querySelector('.duck-runner')) return;
+
+  const duckRunner = document.createElement('div');
+  duckRunner.className = 'duck-runner';
+  duckRunner.setAttribute('aria-hidden', 'true');
+
+  duckRunner.innerHTML = `
+    <span class="duck-runner-duck">
+      <span class="duck-runner-eye"></span>
+      <span class="duck-runner-wing"></span>
+      <span class="duck-runner-leg duck-runner-leg--front"></span>
+      <span class="duck-runner-leg duck-runner-leg--back"></span>
+    </span>
+  `;
+
+  document.body.appendChild(duckRunner);
+})();
+
 
 // ── Accessibility: Quackquackence mode ──────────
 (function () {
