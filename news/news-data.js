@@ -82,6 +82,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "Orlando regresa",
     excerpt:
       "And the boy returns... as a king! our king! the king of the ducks! Orlando regresa a Quackenio y trae consigo la energía de los patos para que todos puedan disfrutar de un buen café y un cuack."
+  },
+  {
+    id: "2026-07-22-jimothy",
+    date: "2026-07-22",
+    title: "Quackenio y Jimothy colab",
+    category: "Noticias",
+    image: "news/220726_jimothy_rave.png",
+    imageAlt: "Quackenio y Jimothy colab",
+    excerpt:
+      "¡Llega la rave oficial de Jimothy! Quackenio estará presente dando cuacks y café para que vivas una noche con toda la energía, ritmo y sabor pato. https://www.instagram.com/p/DbETEs9gQRY/"
   }
 ];
     
