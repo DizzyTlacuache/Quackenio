@@ -92,6 +92,17 @@ window.QUACKENIO_NEWS = [
     imageAlt: "Quackenio y Jimothy colab",
     excerpt:
       "¡Llega la rave oficial de Jimothy! Quackenio estará presente dando cuacks y café para que vivas una noche con toda la energía, ritmo y sabor pato. https://www.instagram.com/p/DbETEs9gQRY/"
+      
+  },
+  {
+    id: "2026-07-23-naranjeros",
+    date: "2026-07-23",
+    title: "Quackenio y Naranjeros colab",
+    category: "Noticias",
+    image: "news/230726_naranjeros.png",
+    imageAlt: "Quackenio y Naranjeros colab",
+    excerpt:
+      "¡Colab de alto vuelo! Quackenio se reunió con Baxter, la mascota de los Diamondbacks de Arizona, y con Beto Coyote, de los Naranjeros de Hermosillo. Hubo café, buena vibra y tantos cuacks que el estadio quedó patodizado."
   }
 ];
     
