@@ -103,6 +103,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "Quackenio y Naranjeros colab",
     excerpt:
       "¡Colab de alto vuelo! Quackenio se reunió con Baxter, la mascota de los Diamondbacks de Arizona, y con Beto Coyote, de los Naranjeros de Hermosillo. Hubo café, buena vibra y tantos cuacks que el estadio quedó patodizado."
+  },
+  {
+    id: "2026-08-06-back_to_school",
+    date: "2026-08-06",
+    title: "Back to School",
+    category: "Noticias",
+    image: "news/060826_back_to_school.png",
+    imageAlt: "Back to School",
+    excerpt:
+      "¡Regreso a clases con mucho quack! Trae tu mochila, di quack, pide tu café y deja que el pato de la suerte te acompañe en el semestre. Porque al volver a la rutina, lo más importante es no quedarse sin plumas ni energía."
   }
 ];
     
