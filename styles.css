@@ -78,9 +78,7 @@ body {
 
 .section-subtitle {
   text-align: center;
-  color: var(--gray);
-  font-size: 1rem;
-  margin-bottom: 3rem;
+  color: #e8e8e8;
   letter-spacing: 0.04em;
 }
 
@@ -540,9 +538,9 @@ body {
 }
 
 .page-hero p {
-  color: var(--gray);
+  color: #ececec;
   font-size: 1.05rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .menu-section {
@@ -979,7 +977,7 @@ footer .footer-tagline {
 }
 
 .founder-caption p {
-  color: var(--gray);
+  color: #e6e6e6;
   font-size: 0.93rem;
   line-height: 1.75;
 }
@@ -994,10 +992,11 @@ footer .footer-tagline {
 }
 
 .story-text p {
-  color: var(--gray);
+  color: #ebebeb;
   font-size: 1rem;
   line-height: 1.85;
   margin-bottom: 1.2rem;
+  font-weight: 400;
 }
 
 .story-text em {
@@ -1021,10 +1020,11 @@ footer .footer-tagline {
 .story-img-caption {
   text-align: center;
   font-size: 0.78rem;
-  color: rgba(170,170,170,0.55);
+  color: #d9d9d9;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-top: 0.75rem;
+  font-weight: 500;
 }
 
 /* Reverse column order for alternating layout */
@@ -1102,7 +1102,7 @@ footer .footer-tagline {
 }
 
 .gallery-caption {
-  color: var(--gray);
+  color: #e6e6e6;
   text-align: center;
   font-size: 0.9rem;
   margin: 0.8rem 0 1rem;
@@ -1166,7 +1166,7 @@ footer .footer-tagline {
 }
 
 .training-step p {
-  color: var(--gray);
+  color: #e7e7e7;
   font-size: 0.9rem;
   line-height: 1.75;
 }
@@ -1182,15 +1182,16 @@ footer .footer-tagline {
 .story-quote {
   font-family: var(--font-heading);
   font-size: clamp(1.4rem, 3vw, 2rem);
-  color: var(--yellow);
+  color: var(--white);
   letter-spacing: 0.04em;
   border-left: 4px solid var(--yellow);
   padding: 1rem 2rem;
   margin: 2rem auto;
   text-align: left;
   max-width: 680px;
-  background: rgba(255,214,0,0.04);
+  background: rgba(36, 27, 20, 0.7);
   border-radius: 0 var(--radius) var(--radius) 0;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
 }
 
 .story-quote cite {
@@ -1198,7 +1199,7 @@ footer .footer-tagline {
   font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--gray);
+  color: var(--light-bg);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-top: 0.75rem;
@@ -1206,7 +1207,7 @@ footer .footer-tagline {
 }
 
 .story-closing {
-  color: var(--gray);
+  color: #f2ebde;
   font-size: 1.05rem;
   line-height: 1.85;
   margin-bottom: 1.2rem;
@@ -1639,8 +1640,7 @@ footer {
 .contact-info h2,
 .category-header h2,
 .founder-caption h3,
-.training-step h3,
-.story-quote {
+.training-step h3 {
   color: #1f3553;
 }
 

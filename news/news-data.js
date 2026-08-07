@@ -113,6 +113,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "Back to School",
     excerpt:
       "¡Regreso a clases con mucho quack! Trae tu mochila, di quack, pide tu café y deja que el pato de la suerte te acompañe en el semestre. Porque al volver a la rutina, lo más importante es no quedarse sin plumas ni energía."
+  },
+  {
+    id: "2026-08-07-fresh_coffee",
+    date: "2026-08-07",
+    title: "Fresh Coffee",
+    category: "Promociones",
+    image: "news/070826_fresh.jpeg",
+    imageAlt: "Fresh Coffee at Quackenio",
+    excerpt:
+      "Café recién preparado, hecho con pasión para un día extraordinario. Trae tu taza, di cuack y empieza tu día the Quackenio way. Disfruta cada sorbo con el toque único de Quackenio: buena vibra, aroma irresistible y energía pato para conquistar tu jornada."
   }
 ];
     
