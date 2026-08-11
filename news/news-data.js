@@ -123,6 +123,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "Fresh Coffee at Quackenio",
     excerpt:
       "Café recién preparado, hecho con pasión para un día extraordinario. Trae tu taza, di cuack y empieza tu día the Quackenio way. Disfruta cada sorbo con el toque único de Quackenio: buena vibra, aroma irresistible y energía pato para conquistar tu jornada."
+  },
+  {
+    id: "2026-08-011-irish_cream",
+    date: "2026-08-11",
+    title: "Nuevo sabor: Irish Cream",
+    category: "Noticias",
+    image: "news/110826_crema_irl.jpeg",
+    imageAlt: "Nuevo sabor: Irish Cream",
+    excerpt:
+      "¡Llegó nuestro sabor especial: Crema Irlandesa! Suave, cremosito y con más estilo que pato en desfile. Ven, pide el tuyo y di cuack en caja: si te enamoras al primer sorbo, no es magia… es pato-talento."
   }
 ];
     
