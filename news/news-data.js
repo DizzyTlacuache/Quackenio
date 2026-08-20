@@ -133,6 +133,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "Nuevo sabor: Irish Cream",
     excerpt:
       "¡Llegó nuestro sabor especial: Crema Irlandesa! Suave, cremosito y con más estilo que pato en desfile. Ven, pide el tuyo y di cuack en caja: si te enamoras al primer sorbo, no es magia… es pato-talento."
+  },
+  {
+    id: "2026-08-026-ruta_azul",
+    date: "2026-08-26",
+    title: "Quackenio y Ruta Azul",
+    category: "Noticias",
+    image: "news/200826_ruta_azul.png",
+    imageAlt: "Quackenio y Ruta Azul colab",
+    excerpt:
+      "¡Quackenio se une a Ruta Azul y oficialmente se volvió el pato más eco-friendly del barrio! Menos basura, más conciencia, y un montón de cuacks para salvar al planeta sin perder la vibra. Trae tu taza reusable, pide tu café y deja que este pato de la sostenibilidad te recuerde: sí, el medio ambiente importa… pero también que el café se toma con estilo y sin plástico extra."
   }
 ];
     
