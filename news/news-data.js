@@ -143,6 +143,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "Nuevos granos y el pan de cada día",
     excerpt:
       "¡Quackenio cuenta con granos de café nuevos, ideales para acompañar el pan de temporada de Sinaloa! Ven por tu café, di cuack para canjear la promo y disfruta un sabor tan bueno que hasta los patos dejaron de graznar para pedir otra pieza."
+  },
+  {
+    id: "2026-08-24-memoria",
+    date: "2026-08-24",
+    title: "Cuacks Lúdicos: ahora con juegos de mesa",
+    category: "Noticias",
+    image: "news/240826_memoria.jpeg",
+    imageAlt: "Cuacks lúdicos: ahora con juegos de mesa",
+    excerpt:
+      "¡Quackenio anda más lúdico que nunca! Ya tenemos un nuevo juego de memoria para que pongas a prueba tus neuronas y encuentres cada pareja sin perder el cuack. Ven por tu café, arma el momento y disfruta de nuevos momentos Quackenio: aquí la diversión siempre hace pata y la memoria vuela."
   }
 ];
     
