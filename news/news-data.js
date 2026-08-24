@@ -125,7 +125,7 @@ window.QUACKENIO_NEWS = [
       "Café recién preparado, hecho con pasión para un día extraordinario. Trae tu taza, di cuack y empieza tu día the Quackenio way. Disfruta cada sorbo con el toque único de Quackenio: buena vibra, aroma irresistible y energía pato para conquistar tu jornada."
   },
   {
-    id: "2026-08-011-irish_cream",
+    id: "2026-08-11-irish_cream",
     date: "2026-08-11",
     title: "Nuevo sabor: Irish Cream",
     category: "Noticias",
@@ -133,6 +133,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "Nuevo sabor: Irish Cream",
     excerpt:
       "¡Llegó nuestro sabor especial: Crema Irlandesa! Suave, cremosito y con más estilo que pato en desfile. Ven, pide el tuyo y di cuack en caja: si te enamoras al primer sorbo, no es magia… es pato-talento."
+  },
+  {
+    id: "2026-08-24-sinaloa_bread",
+    date: "2026-08-24",
+    title: "Nuevos granos y el pan de cada día",
+    category: "Promociones",
+    image: "news/240826_sinaloa.jpeg",
+    imageAlt: "Nuevos granos y el pan de cada día",
+    excerpt:
+      "¡Quackenio cuenta con granos de café nuevos, ideales para acompañar el pan de temporada de Sinaloa! Ven por tu café, di cuack para canjear la promo y disfruta un sabor tan bueno que hasta los patos dejaron de graznar para pedir otra pieza."
   }
 ];
     
