@@ -153,6 +153,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "Cuacks lúdicos: ahora con juegos de mesa",
     excerpt:
       "¡Quackenio anda más lúdico que nunca! Ya tenemos un nuevo juego de memoria para que pongas a prueba tus neuronas y encuentres cada pareja sin perder el cuack. Ven por tu café, arma el momento y disfruta de nuevos momentos Quackenio: aquí la diversión siempre hace pata y la memoria vuela."
+  },
+  {
+    id: "2026-08-31-aura",
+    date: "2026-08-31",
+    title: "Aura Farming: la nueva experiencia de Quackenio",
+    category: "Noticias",
+    image: "news/310826_aurafarming.png",
+    imageAlt: "aura farming @ quackenio",
+    excerpt:
+      "¡Llegó el Aura Farming a Quackenio! Hoy nuestros patos están acumulando tanta aura que se les fue el cuack entre las plumas: no habrá servicio porque Quackenio olvidó cómo preparar café. Vuelve mañana para empezar con toda la energía: start your day the Quackenio way."
   }
 ];
     
