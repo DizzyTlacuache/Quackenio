@@ -162,7 +162,7 @@ window.QUACKENIO_NEWS = [
     image: "news/310826_aurafarming.png",
     imageAlt: "aura farming @ quackenio",
     excerpt:
-      "¡Llegó el Aura Farming a Quackenio! Hoy nuestros patos están acumulando tanta aura que se les fue el cuack entre las plumas: no habrá servicio porque Quackenio olvidó cómo preparar café. Vuelve mañana para empezar con toda la energía: start your day the Quackenio way."
+      "¡Llegó el Aura Farming a Quackenio! Hoy nuestros patos están acumulando tanta aura que se les fue el cuack entre las plumas: no habrá servicio porque Cuackamardo el güapo olvidó cómo preparar café. Vuelve mañana para empezar con toda la energía: start your day the Quackenio way."
   }
 ];
     
