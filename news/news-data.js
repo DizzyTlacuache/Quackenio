@@ -163,6 +163,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "aura farming @ quackenio",
     excerpt:
       "¡Llegó el Aura Farming a Quackenio! Hoy nuestros patos están acumulando tanta aura que se les fue el cuack entre las plumas: no habrá servicio porque Cuackamardo el güapo olvidó cómo preparar café. Vuelve mañana para empezar con toda la energía: start your day the Quackenio way."
+  },
+  {
+    id: "2026-09-01-aura",
+    date: "2026-09-01",
+    title: "Moar Aura Farming",
+    category: "Noticias",
+    image: "news/010926_moar_aura.jpeg",
+    imageAlt: "max aura farming @ quackenio",
+    excerpt:
+      "¡Quackenio ganó el torneo de Aura Farming y el servicio se reinicia con toda la pata! Nuestros patos volvieron con el cuack bien puesto, Cuackencio ya recordó cómo preparar café y la cafetera está lista para despegar. Ven a celebrar este triunfo de alto vuelo: start your day the Quackenio way."
   }
 ];
     
