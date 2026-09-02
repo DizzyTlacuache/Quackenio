@@ -173,6 +173,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "max aura farming @ quackenio",
     excerpt:
       "¡Quackenio ganó el torneo de Aura Farming y el servicio se reinicia con toda la pata! Nuestros patos volvieron con el cuack bien puesto, Cuackencio ya recordó cómo preparar café y la cafetera está lista para despegar. Ven a celebrar este triunfo de alto vuelo: start your day the Quackenio way."
+  },
+  {
+    id: "2026-09-02-class",
+    date: "2026-09-02",
+    title: "Master Class @ Quackenio",
+    category: "Noticias",
+    image: "news/020926_masterclass.jpeg",
+    imageAlt: "master class @ quackenio",
+    excerpt:
+      "¡Quackencio celebró una master class para preparar al futuro de los baristas mexicanos! Entre espresso, espuma y secretos de la cafetera, nuestros alumnos aprendieron a servir café con precisión, pasión y mucho cuack. Porque el buen barista no nace, se hace... y el gran barista además deja la taza bien patodizada."
   }
 ];
     
