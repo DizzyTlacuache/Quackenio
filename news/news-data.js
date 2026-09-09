@@ -183,6 +183,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "master class @ quackenio",
     excerpt:
       "¡Quackencio celebró una master class para preparar al futuro de los baristas mexicanos! Entre espresso, espuma y secretos de la cafetera, nuestros alumnos aprendieron a servir café con precisión, pasión y mucho cuack. Porque el buen barista no nace, se hace... y el gran barista además deja la taza bien patodizada."
+  },
+  {
+    id: "2026-09-09-class2",
+    date: "2026-09-09",
+    title: "Anuncio de Master Class @ Quackenio",
+    category: "Noticias",
+    image: "news/090926_class.jpeg",
+    imageAlt: "master class @ quackenio",
+    excerpt:
+      "¡Se viene la segunda Master Class de Quackenio! Prepárate para aprender los secretos del café, dominar la espuma y convertirte en un barista de alto vuelo. Trae tus ganas de aprender, tu mejor cuack y mucho apetito por el conocimiento: aquí hasta los patos saben que una buena taza nunca se sirve a la ligera, sino con mucha pluma y precisión. ¡Aparta la fecha y no te quedes fuera del estanque!"
   }
 ];
     
