@@ -189,7 +189,7 @@ window.QUACKENIO_NEWS = [
     date: "2026-09-09",
     title: "Anuncio de Master Class @ Quackenio",
     category: "Noticias",
-    image: "news/090926_class.jpeg",
+    image: "news/090926_class.jpg",
     imageAlt: "master class @ quackenio",
     excerpt:
       "¡Se viene la segunda Master Class de Quackenio! Prepárate para aprender los secretos del café, dominar la espuma y convertirte en un barista de alto vuelo. Trae tus ganas de aprender, tu mejor cuack y mucho apetito por el conocimiento: aquí hasta los patos saben que una buena taza nunca se sirve a la ligera, sino con mucha pluma y precisión. ¡Aparta la fecha y no te quedes fuera del estanque!"
