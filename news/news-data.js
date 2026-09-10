@@ -193,6 +193,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "master class @ quackenio",
     excerpt:
       "¡Se viene la segunda Master Class de Quackenio! Prepárate para aprender los secretos del café, dominar la espuma y convertirte en un barista de alto vuelo. Trae tus ganas de aprender, tu mejor cuack y mucho apetito por el conocimiento: aquí hasta los patos saben que una buena taza nunca se sirve a la ligera, sino con mucha pluma y precisión. ¡Aparta la fecha y no te quedes fuera del estanque!"
+  },
+  {
+    id: "2026-09-10-photoshoot",
+    date: "2026-09-10",
+    title: "Photoshoot oficial @ Quackenio",
+    category: "Noticias",
+    image: "news/100926_photoshoot.jpg",
+    imageAlt: "photoshoot @ quackenio",
+    excerpt:
+      "¡Quackenio tuvo su photoshoot oficial! Nuestros patos se pusieron sus mejores plumas, posaron con mucho estilo y dejaron el cuack listo para la cámara. Hubo flashes, café y actitud de alto vuelo: porque aquí hasta el pato más tímido sabe que una buena foto siempre sale bien patodizada."
   }
 ];
     
