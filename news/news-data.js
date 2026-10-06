@@ -203,6 +203,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "photoshoot @ quackenio",
     excerpt:
       "¡Quackenio tuvo su photoshoot oficial! Nuestros patos se pusieron sus mejores plumas, posaron con mucho estilo y dejaron el cuack listo para la cámara. Hubo flashes, café y actitud de alto vuelo: porque aquí hasta el pato más tímido sabe que una buena foto siempre sale bien patodizada."
+  },
+  {
+    id: "2026-10-05-photoshoot",
+    date: "2026-10-05",
+    title: "Quackenio @ AI LinkUp",
+    category: "Noticias",
+    image: "news/051026_ialinkup.jpg",
+    imageAlt: "quackenio @ unison",
+    excerpt:
+      "¡Quackenio presentó una conferencia en IA LinkUp, en Unison! Compartimos nuestra experiencia y pasión por el café y la ciencia con la comunidad, llevando el cuack a este gran encuentro. Mas detalles en el sitio oficial: https://ai-linkup.unison.mx"
   }
 ];
     
