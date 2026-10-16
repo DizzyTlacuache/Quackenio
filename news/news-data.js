@@ -213,6 +213,17 @@ window.QUACKENIO_NEWS = [
     imageAlt: "quackenio @ unison",
     excerpt:
       "¡Quackenio presentó una conferencia en IA LinkUp, en Unison! Compartimos nuestra experiencia y pasión por el café y la ciencia con la comunidad, llevando el cuack a este gran encuentro. Mas detalles en el sitio oficial: https://ai-linkup.unison.mx"
+  },
+  {
+    id: "2026-10-16-reto",
+    date: "2026-10-16",
+    title: "Reto Quackenio",
+    category: "Noticias",
+    image: "news/161026_retoquackenio.jpg",
+    imageAlt: "reto @ quackenio",
+    excerpt:
+      "¡Se lanzó el nuevo reto de Quackenio! Participa en nuestra competencia de barismo y demuestra tus habilidades con el café. ¡No te quedes atrás, sino que vuela alto con tu cuack!"
   }
 ];
     
+
