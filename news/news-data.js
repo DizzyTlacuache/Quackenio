@@ -223,6 +223,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "reto @ quackenio",
     excerpt:
       "¡Se lanzó el nuevo reto de Quackenio! Participa en nuestra competencia de barismo y demuestra tus habilidades con el café. ¡No te quedes atrás, sino que vuela alto con tu cuack!"
+  },
+  {
+    id: "2026-10-20-cuento",
+    date: "2026-10-20",
+    title: "Cuento de Quackenio",
+    category: "Noticias",
+    image: "news/201026_cuento.jpg",
+    imageAlt: "cuentos de quackenio",
+    excerpt:
+      "¡Quackenio llegó a los cuentos de hadas para proteger a nuestros patitos! Con su cuack encantado, ningún dragón se atreverá a molestarlos. Y si aparece un villano, que no se haga el pato: ¡nuestros héroes emplumados siempre viven felices para siempre!"
   }
 ];
     
