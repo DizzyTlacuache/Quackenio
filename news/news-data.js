@@ -233,6 +233,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "cuentos de quackenio",
     excerpt:
       "¡Quackenio llegó a los cuentos de hadas para proteger a nuestros patitos! Con su cuack encantado, ningún dragón se atreverá a molestarlos. Y si aparece un villano, que no se haga el pato: ¡nuestros héroes emplumados siempre viven felices para siempre!"
+  },
+  {
+    id: "2026-10-21-halloween",
+    date: "2026-10-21",
+    title: "Noche de Brujas de Quackencio",
+    category: "Noticias",
+    image: "news/211026_halloween.jpg",
+    imageAlt: "Halloween de quackencio",
+    excerpt:
+      "Quackencio fue al doctor, muy valiente y bien peinado; tras revisarlo de pies a pico, salió la pura calaca. La Catrina lanzó un cuack y lo invitó a bailar; pero él pidió un cafecito: ¡que hasta muerto hay que madrugar!"
   }
 ];
     
