@@ -6,6 +6,8 @@ Este documento explica cuando y como usar cada guia de diseno disponible en el p
 Guias actuales:
 - DESIGN.md
 - DESIGN_TROPICAL.md
+- DESIGN_BACKSCHOOL.md
+- DESIGN_HALLOWEEN.md
 
 ## Cuando usar cada guia
 
@@ -23,11 +25,21 @@ Usar esta guia cuando:
 - Se actualicen tokens del bloque seasonal en styles.css.
 - Se preparen campañas o contenidos con mood tropical.
 
+### Usar DESIGN_BACKSCHOOL.md (guia seasonal)
+Usar esta guia cuando:
+- La experiencia activa sea colegial, academica o de regreso a clases.
+- Se actualicen la paleta pergamino, madera, azul marino y dorado.
+
+### Usar DESIGN_HALLOWEEN.md (guia seasonal)
+Usar esta guia cuando:
+- La experiencia activa sea Halloween con inspiración en las tradiciones mexicanas de Día de Muertos.
+- Se apliquen motivos de cempasúchil, papel picado y ofrenda sin reducir la celebración a decoraciones genéricas de miedo.
+
 ## Regla de prioridad entre guias
 Cuando ambas guias describan el mismo componente:
-1. Si la temporada tropical esta activa, manda DESIGN_TROPICAL.md.
+1. Si hay una temporada activa, manda la guia seasonal correspondiente (Halloween, back to school o tropical).
 2. Si no hay temporada activa, manda DESIGN.md.
-3. Si hay duda, conservar estructura de DESIGN.md y aplicar solo capa visual de DESIGN_TROPICAL.md.
+3. Si hay duda, conservar la estructura de DESIGN.md y aplicar solo la capa visual seasonal pertinente.
 
 ## Como aplicarlas en flujo de trabajo
 
@@ -41,7 +53,7 @@ Cuando ambas guias describan el mismo componente:
 
 ### Flujo recomendado para nuevos componentes
 1. Definir el componente en lenguaje base con DESIGN.md.
-2. Si aplica temporada, crear variante tropical segun DESIGN_TROPICAL.md.
+2. Si aplica temporada, crear una variante segun la guia seasonal correspondiente.
 3. Evitar duplicar componentes; preferir variantes por tema.
 
 ## Casos comunes
@@ -52,7 +64,7 @@ Cuando ambas guias describan el mismo componente:
 
 ### Caso B: Nueva seccion en pagina About
 - Estructura narrativa y jerarquia: seguir DESIGN.md.
-- Si el sitio esta en modo tropical: aplicar paleta, fondos y acabados de DESIGN_TROPICAL.md.
+- Si hay un tema seasonal activo: aplicar su paleta, fondos y acabados sin alterar la estructura base.
 
 ### Caso C: Ajuste de navbar
 - Base de navegacion y accesibilidad: DESIGN.md.
@@ -60,7 +72,7 @@ Cuando ambas guias describan el mismo componente:
 
 ## Mantenimiento de documentacion
 - Si cambia el look base, actualizar primero DESIGN.md.
-- Si cambia la temporada tropical, actualizar DESIGN_TROPICAL.md.
+- Si cambia una temporada, actualizar la guia seasonal correspondiente.
 - Si cambia la regla de decision entre guias, actualizar este archivo.
 
 ## Convenciones para el equipo
