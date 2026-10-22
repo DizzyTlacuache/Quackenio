@@ -243,6 +243,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "Halloween de quackencio",
     excerpt:
       "Quackencio fue al doctor, muy valiente y bien peinado; tras revisarlo de pies a pico, salió la pura calaca. La Catrina lanzó un cuack y lo invitó a bailar; pero él pidió un cafecito: ¡que hasta muerto hay que madrugar!"
+  },
+  {
+    id: "2026-10-22-creepy",
+    date: "2026-10-22",
+    title: "Apariciones misteriosas de Quackencio",
+    category: "Noticias",
+    image: "news/221026_backrooms.jpg",
+    imageAlt: "backrooms (casting) de quackencio",
+    excerpt:
+      "A medianoche, una aparición surgió de golpe al final del pasillo: ¡Quackencio! Soltó un cuack tan inesperado que hasta el susto se hizo pato y salió corriendo."
   }
 ];
     
