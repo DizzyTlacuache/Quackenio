@@ -253,6 +253,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "backrooms (casting) de quackencio",
     excerpt:
       "A medianoche, una aparición surgió de golpe al final del pasillo: ¡Quackencio! Soltó un cuack tan inesperado que hasta el susto se hizo pato y salió corriendo."
+  },
+  {
+    id: "2026-10-26-perro",
+    date: "2026-10-26",
+    title: "El culto al perro-Quackencio",
+    category: "Promociones",
+    image: "news/261026_perro.jpg",
+    imageAlt: "El culto al quack... digo, perro",
+    excerpt:
+      "¡Promoción del culto al perro-Quackencio! Tenemos café para que disfrutes mientras rindes homenaje al cuack. Di cuack para recibir un café especial con wacara de perro."
   }
 ];
     
