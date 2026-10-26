@@ -2155,15 +2155,15 @@ footer p {
   border-color: rgba(36, 24, 43, 0.72);
 }
 
-.theme-halloween .quack-language-toggle {
+.theme-halloween .quack-language-control {
   border-color: rgba(244, 173, 50, 0.58);
   background: #21172a;
   color: #ffc45a;
 }
 
-.theme-halloween .quack-language-toggle[aria-pressed="true"] {
-  background: #f4ad32;
-  color: #211427;
+.theme-halloween .quack-language-control option {
+  background: #21172a;
+  color: #ffc45a;
 }
 
 .theme-halloween :is(a, button, input, textarea):focus-visible {

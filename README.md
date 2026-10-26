@@ -10,7 +10,7 @@ El proyecto ya incluye:
 
 - Tema Halloween seasonal con inspiración mexicana de Día de Muertos.
 - Sistema de noticias dinamico (home + archivo) desde un solo archivo de datos.
-- Modo de traduccion "Quackquackence" con toggle persistente.
+- Selector persistente de idioma: Quackquackence, Perro y Castellano.
 - Efectos de sonido "quack" en interacciones.
 - Visor de galeria (zoom, navegacion, teclado, rueda y swipe).
 - Formulario de contacto con validacion del lado del cliente.
@@ -36,9 +36,10 @@ El proyecto ya incluye:
 - Render dinamico de noticias en home (destacada) y en pagina de archivo (todas).
 - Orden de noticias por fecha descendente.
 - Fallback visual cuando no hay noticias publicadas.
-- Modo Quackquackence:
+- Selector de idioma:
 	- Traduce texto visible y atributos (placeholder, aria-label, title, alt).
-	- Persiste estado en localStorage.
+	- Incluye Quackquackence ("quack"), Perro ("guau") y Castellano (texto original).
+	- Persiste la seleccion en localStorage y conserva compatibilidad con el toggle anterior.
 - Efecto de sonido quack en botones, tabs y links de navegacion.
 - Scroll reveal para elementos clave.
 - Formulario de contacto con validaciones basicas y envio simulado.

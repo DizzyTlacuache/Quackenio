@@ -86,11 +86,16 @@
 })();
 
 
-// ── Accessibility: Quackquackence mode ──────────
+// ── Language selector ────────────────────────────
 (function () {
   const STORAGE_KEY = 'quackenio_quackquackence_mode';
   const EXCLUDED_SELECTOR = 'script, style, noscript, code, pre, textarea, input, select, option';
-  let quackModeEnabled = false;
+  const LANGUAGES = [
+    { value: 'quackquackence', label: 'Quackquackence', word: 'quack' },
+    { value: 'perro', label: 'Perro', word: 'guau' },
+    { value: 'castellano', label: 'Castellano' }
+  ];
+  let selectedLanguage = 'castellano';
 
   function preserveWordCase(original, translated) {
     if (original === original.toUpperCase()) return translated.toUpperCase();
@@ -100,12 +105,15 @@
     return translated;
   }
 
-  function quackifyWord(word) {
-    return preserveWordCase(word, 'quack');
+  function translateWord(word) {
+    const language = LANGUAGES.find((item) => item.value === selectedLanguage);
+    return language && language.word
+      ? preserveWordCase(word, language.word)
+      : word;
   }
 
-  function quackifyText(text) {
-    return text.replace(/[A-Za-zÀ-ÿ]+/g, (word) => quackifyWord(word));
+  function translateText(text) {
+    return text.replace(/[A-Za-zÀ-ÿ]+/g, translateWord);
   }
 
   function getTranslatableTextNodes() {
@@ -128,12 +136,17 @@
     return nodes;
   }
 
-  function applyQuackMode() {
+  function applySelectedLanguage() {
+    if (selectedLanguage === 'castellano') {
+      restoreOriginalLanguage();
+      return;
+    }
+
     getTranslatableTextNodes().forEach((node) => {
       if (node.__quackOriginalText === undefined) {
         node.__quackOriginalText = node.nodeValue;
       }
-      node.nodeValue = quackifyText(node.__quackOriginalText);
+      node.nodeValue = translateText(node.__quackOriginalText);
     });
 
     const translatableAttributes = ['placeholder', 'aria-label', 'title', 'alt'];
@@ -147,7 +160,7 @@
         if (el[key] === undefined) {
           el[key] = el.getAttribute(attr);
         }
-        el.setAttribute(attr, quackifyText(el[key]));
+        el.setAttribute(attr, translateText(el[key]));
       });
     });
   }
@@ -170,13 +183,13 @@
     });
   }
 
-  function injectToggleStyles() {
-    if (document.getElementById('quack-language-toggle-styles')) return;
+  function injectSelectorStyles() {
+    if (document.getElementById('quack-language-selector-styles')) return;
 
     const style = document.createElement('style');
-    style.id = 'quack-language-toggle-styles';
+    style.id = 'quack-language-selector-styles';
     style.textContent = `
-      .quack-language-toggle {
+      .quack-language-control {
         position: fixed;
         right: 1rem;
         bottom: 1rem;
@@ -185,58 +198,78 @@
         background: #111;
         color: #FFD600;
         border-radius: 999px;
-        padding: 0.65rem 0.95rem;
+        padding: 0.45rem 0.85rem;
         font-size: 0.8rem;
         font-weight: 700;
         letter-spacing: 0.04em;
-        cursor: pointer;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
       }
-      .quack-language-toggle[aria-pressed="true"] {
-        background: #FFD600;
-        color: #111;
+      .quack-language-control select {
+        max-width: 12rem;
+        border: 0;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+        cursor: pointer;
+      }
+      .quack-language-control option {
+        background: #111;
+        color: #FFD600;
+      }
+      .quack-language-control select:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 3px;
       }
     `;
     document.head.appendChild(style);
   }
 
-  function setToggleLabel(button) {
-    button.textContent = quackModeEnabled
-      ? 'QUACK QUACK'
-      : 'Quackquackence: OFF';
-    button.setAttribute('aria-pressed', String(quackModeEnabled));
-  }
+  function createLanguageSelector() {
+    injectSelectorStyles();
 
-  function createToggleButton() {
-    injectToggleStyles();
+    const control = document.createElement('div');
+    control.className = 'quack-language-control';
 
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'quack-language-toggle';
-    button.setAttribute('aria-label', 'Activar o desactivar traduccion a Quackquackence');
-    document.body.appendChild(button);
+    const label = document.createElement('label');
+    label.htmlFor = 'quack-language-selector';
+    label.textContent = 'Idioma:';
 
-    button.addEventListener('click', () => {
-      quackModeEnabled = !quackModeEnabled;
-      localStorage.setItem(STORAGE_KEY, quackModeEnabled ? 'on' : 'off');
-
-      if (quackModeEnabled) {
-        applyQuackMode();
-      } else {
-        restoreOriginalLanguage();
-      }
-      setToggleLabel(button);
+    const selector = document.createElement('select');
+    selector.id = 'quack-language-selector';
+    selector.setAttribute('aria-label', 'Seleccionar idioma');
+    LANGUAGES.forEach((language) => {
+      const option = document.createElement('option');
+      option.value = language.value;
+      option.textContent = language.label;
+      selector.appendChild(option);
     });
 
-    return button;
+    control.append(label, selector);
+    document.body.appendChild(control);
+
+    selector.addEventListener('change', () => {
+      selectedLanguage = selector.value;
+      localStorage.setItem(STORAGE_KEY, selectedLanguage);
+      applySelectedLanguage();
+    });
+
+    return selector;
   }
 
-  const button = createToggleButton();
-  quackModeEnabled = localStorage.getItem(STORAGE_KEY) === 'on';
-  if (quackModeEnabled) {
-    applyQuackMode();
-  }
-  setToggleLabel(button);
+  const selector = createLanguageSelector();
+  const savedLanguage = localStorage.getItem(STORAGE_KEY);
+  selectedLanguage = savedLanguage === 'on'
+    ? 'quackquackence'
+    : savedLanguage === 'off'
+      ? 'castellano'
+      : LANGUAGES.some((language) => language.value === savedLanguage)
+        ? savedLanguage
+        : 'castellano';
+  selector.value = selectedLanguage;
+  applySelectedLanguage();
 })();
 
 // ── Hamburger menu toggle ──────────────────────
