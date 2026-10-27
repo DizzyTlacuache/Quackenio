@@ -263,6 +263,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "El culto al quack... digo, perro",
     excerpt:
       "¡Promoción del culto al perro-Quackencio! Tenemos café para que disfrutes mientras rindes homenaje al cuack. Di cuack para recibir un café especial con wacara de perro."
+  },
+  {
+    id: "2026-10-27-obregon",
+    date: "2026-10-27",
+    title: "Cambio de sede: Quackenio en club Obregón",
+    category: "Noticias",
+    image: "news/271026_club_obregon.jpeg",
+    imageAlt: "El culto al quack... digo, club obregón",
+    excerpt:
+      "¡En El Club Obregón cambiaron las bebidas que vendían! El clásico de las fiestas del pueblo renueva su oferta para que disfrutes la noche al ritmo del cuack."
   }
 ];
     
