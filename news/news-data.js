@@ -273,6 +273,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "El culto al quack... digo, club obregón",
     excerpt:
       "¡En El Club Obregón cambiaron las bebidas que vendían! El clásico de las fiestas del pueblo renueva su oferta para que disfrutes la noche al ritmo del cuack."
+  },
+  {
+    id: "2026-10-28-start",
+    date: "2026-10-28",
+    title: "Starting your day, the Quackenio way",
+    category: "Noticias",
+    image: "news/281026_start_day.jpeg",
+    imageAlt: "¿que hace aquí? chismosille",
+    excerpt:
+      "¡Inicia tu día the Quackenio way! Despierta con el sabor que te pone de buenas y convierte cada mañana en un momento para disfrutar. Pasa por tu bebida favorita y arranca con toda la energía del cuack."
   }
 ];
     
