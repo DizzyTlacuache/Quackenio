@@ -283,6 +283,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "¿que hace aquí? chismosille",
     excerpt:
       "¡Inicia tu día the Quackenio way! Despierta con el sabor que te pone de buenas y convierte cada mañana en un momento para disfrutar. Pasa por tu bebida favorita y arranca con toda la energía del cuack."
+  },
+  {
+    id: "2026-10-29-fancy",
+    date: "2026-10-29",
+    title: "Fancy little cuacks",
+    category: "Noticias",
+    image: "news/291026_fancy_quack.jpeg",
+    imageAlt: "¿que hace aquí? fancy chismosille",
+    excerpt:
+      "¡El Quackencio llegó con todo el glamour! Plumas elegantes, actitud de alta sociedad y un cuack digno de alfombra roja. Pásale por tu bebida favorita y ponte fancy: hoy se nada con estilo y se presume hasta el último patito."
   }
 ];
     
