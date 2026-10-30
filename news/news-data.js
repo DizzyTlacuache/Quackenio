@@ -293,6 +293,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "¿que hace aquí? fancy chismosille",
     excerpt:
       "¡El Quackencio llegó con todo el glamour! Plumas elegantes, actitud de alta sociedad y un cuack digno de alfombra roja. Pásale por tu bebida favorita y ponte fancy: hoy se nada con estilo y se presume hasta el último patito."
+  },
+  {
+    id: "2026-10-30-bodoque",
+    date: "2026-10-30",
+    title: "31 minutos - la nota quackenio",
+    category: "Noticias",
+    image: "news/301026_bodoque.jpeg",
+    imageAlt: "Patito con las orejas de Juan Carlos Bodoque, de 31 minutos.",
+    excerpt:
+      "Última hora en Quackenio: Juan Carlos Bodoque llega con la nota verde y un patito toma el micrófono. La noticia está que vuela… aunque nuestro reportero prefirió irse nadando. ¡Cuack y seguimos con más!"
   }
 ];
     
