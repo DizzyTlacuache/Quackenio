@@ -303,6 +303,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "Patito con las orejas de Juan Carlos Bodoque, de 31 minutos.",
     excerpt:
       "Última hora en Quackenio: Juan Carlos Bodoque llega con la nota verde y un patito toma el micrófono. La noticia está que vuela… aunque nuestro reportero prefirió irse nadando. ¡Cuack y seguimos con más!"
+  },
+  {
+    id: "2026-11-02-bodoque",
+    date: "2026-11-02",
+    title: "Día de Moridos en Quackenio",
+    category: "Noticias",
+    image: "news/021126_quack_fren.jpg",
+    imageAlt: "Spooky and nosy frens.",
+    excerpt:
+      "En Quackenio celebramos el Día de Moridos con flores, velitas y patitos disfrazados: ¡qué miedo tan cuack-nífico! Recordamos con cariño a los frens que ya emprendieron el último vuelo y les dejamos su lugar en la ofrenda. ¿Por qué el patito cruzó el panteón? ¡Para llegar al otro lado… cuac!"
   }
 ];
     
