@@ -323,6 +323,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "¿que hace aquí? chismosille",
     excerpt:
       "En Quackenio celebramos el Día de Moridos con flores, velitas y patitos disfrazados: ¡qué miedo tan cuack-nífico! Recordamos con cariño a los frens que ya emprendieron el último vuelo y les dejamos su lugar en la ofrenda. ¿Por qué el patito cruzó el panteón? ¡Para llegar al otro lado… cuac!"
+  },
+  {
+    id: "2026-11-03-aqua",
+    date: "2026-11-03",
+    title: "Aqua Di Quackenio",
+    category: "Noticias",
+    image: "news/031126_aquacuack.jpg",
+    imageAlt: "¿que hace aquí? chismosille",
+    excerpt:
+      "En un esfuerzo por cuidar el medio ambiente, Quackenio innova con un nuevo producto oficial: ¡agua en polvo! Solo agrega agua. ¿Por qué el pato llevó una sombrilla? ¡Por si llovía sobre su agua en polvo! Cuac. #rutaAzul #quackenio #aguaenpolvo"
   }
 ];
     
