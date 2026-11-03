@@ -379,7 +379,9 @@
   }
 
   if (archiveContainer) {
-    archiveContainer.innerHTML = sortedPosts.map(renderPostCard).join('');
+    const limit = parseInt(archiveContainer.dataset.limit, 10);
+    const visiblePosts = limit > 0 ? sortedPosts.slice(0, limit) : sortedPosts;
+    archiveContainer.innerHTML = visiblePosts.map(renderPostCard).join('');
   }
 })();
 
