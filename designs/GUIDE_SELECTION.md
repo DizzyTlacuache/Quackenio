@@ -8,6 +8,7 @@ Guias actuales:
 - DESIGN_TROPICAL.md
 - DESIGN_BACKSCHOOL.md
 - DESIGN_HALLOWEEN.md
+- DESIGN_THANKSGIVING.md (tema activo)
 
 ## Cuando usar cada guia
 
@@ -34,6 +35,11 @@ Usar esta guia cuando:
 Usar esta guia cuando:
 - La experiencia activa sea Halloween con inspiración en las tradiciones mexicanas de Día de Muertos.
 - Se apliquen motivos de cempasúchil, papel picado y ofrenda sin reducir la celebración a decoraciones genéricas de miedo.
+
+### Usar DESIGN_THANKSGIVING.md (guia seasonal)
+Usar esta guia cuando:
+- La experiencia activa sea Acción de Gracias (otoño, cosecha, gratitud).
+- Se apliquen la paleta nogal, dorado cosecha, calabaza y arándano.
 
 ## Regla de prioridad entre guias
 Cuando ambas guias describan el mismo componente:

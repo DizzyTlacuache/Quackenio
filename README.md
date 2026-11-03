@@ -8,7 +8,7 @@ No requiere build step ni framework para ejecutarse.
 
 El proyecto ya incluye:
 
-- Tema Halloween seasonal con inspiración mexicana de Día de Muertos.
+- Tema seasonal activo de Acción de Gracias (`theme-thanksgiving`).
 - Sistema de noticias dinamico (home + archivo) desde un solo archivo de datos.
 - Selector persistente de idioma: Quackquackence, Perro y Castellano.
 - Efectos de sonido "quack" en interacciones.
@@ -52,7 +52,8 @@ Documentacion disponible:
 - [designs/DESIGN.md](designs/DESIGN.md): guia base del sitio.
 - [designs/DESIGN_TROPICAL.md](designs/DESIGN_TROPICAL.md): guia de la faceta tropical seasonal.
 - [designs/DESIGN_BACKSCHOOL.md](designs/DESIGN_BACKSCHOOL.md): guia de la faceta back to school.
-- [designs/DESIGN_HALLOWEEN.md](designs/DESIGN_HALLOWEEN.md): guia del tema Halloween con inspiración mexicana.
+- [designs/DESIGN_HALLOWEEN.md](designs/DESIGN_HALLOWEEN.md): guia del tema Halloween con inspiración mexicana (archivada).
+- [designs/DESIGN_THANKSGIVING.md](designs/DESIGN_THANKSGIVING.md): guia del tema activo de Acción de Gracias.
 - [designs/GUIDE_SELECTION.md](designs/GUIDE_SELECTION.md): cuando y como usar cada guia.
 
 ## Como ejecutar localmente

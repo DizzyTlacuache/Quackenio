@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&family=Cinzel:wght@500;700&family=Lora:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&family=Cinzel:wght@500;700&family=Playfair+Display:wght@600;700&family=Lora:wght@400;600;700&display=swap');
 
 /* ================================================
    QUACKENIO — Stylesheet
@@ -1710,469 +1710,470 @@ footer p {
   }
 }
 
-/* ---------- Seasonal Theme: Halloween / Día de Muertos ---------- */
-.theme-halloween {
-  --black: #160f1b;
-  --dark: #24182b;
-  --dark-card: #32213a;
-  --yellow: #f4ad32;
-  --yellow-hover: #dc8d20;
-  --orange: #e86f3a;
+/* ---------- Seasonal Theme: Thanksgiving / Acción de Gracias ---------- */
+.theme-thanksgiving {
+  --black: #1f140c;
+  --dark: #2f1d10;
+  --dark-card: #43291a;
+  --yellow: #e8a43a;
+  --yellow-hover: #c98622;
+  --orange: #d2692a;
   --white: #fff3df;
-  --gray: #c9b9c8;
+  --gray: #d9c4a4;
   --light-bg: #fff0dc;
-  --navy: #29203a;
-  --navy-deep: #191321;
+  --navy: #3a2415;
+  --navy-deep: #1a110a;
 
-  --bg: #160f1b;
-  --bg-section: #24182b;
-  --bg-alt: #1c1423;
+  --bg: #1f140c;
+  --bg-section: #2f1d10;
+  --bg-alt: #271910;
   --text: #fff3df;
-  --text-muted: #c9b9c8;
-  --accent: #f4ad32;
-  --accent-2: #d14e83;
-  --shadow: rgba(11, 5, 16, 0.55);
-  --font-heading: 'Cinzel', 'Bebas Neue', serif;
+  --text-muted: #d9c4a4;
+  --accent: #e8a43a;
+  --accent-2: #b5452e;
+  --shadow: rgba(18, 9, 3, 0.55);
+  --font-heading: 'Playfair Display', 'Bebas Neue', serif;
   --font-body: 'Lora', 'Inter', serif;
 
   background:
-    radial-gradient(ellipse at 10% 6%, rgba(209, 78, 131, 0.12), transparent 28rem),
-    radial-gradient(ellipse at 90% 18%, rgba(244, 173, 50, 0.1), transparent 30rem),
-    linear-gradient(180deg, #160f1b 0%, #201526 52%, #170f1b 100%);
+    radial-gradient(ellipse at 10% 6%, rgba(181, 69, 46, 0.12), transparent 28rem),
+    radial-gradient(ellipse at 90% 18%, rgba(232, 164, 58, 0.1), transparent 30rem),
+    linear-gradient(180deg, #1f140c 0%, #2a1a0f 52%, #1c120a 100%);
   color: var(--text);
 }
 
-.theme-halloween .navbar {
-  background: linear-gradient(180deg, #2b1d35 0%, #1d1425 100%);
-  border-bottom: 2px solid #f4ad32;
-  box-shadow: 0 8px 24px rgba(12, 5, 17, 0.45);
+.theme-thanksgiving .navbar {
+  background: linear-gradient(180deg, #3a2415 0%, #25170d 100%);
+  border-bottom: 2px solid #e8a43a;
+  box-shadow: 0 8px 24px rgba(18, 9, 3, 0.45);
 }
 
-.theme-halloween .navbar .container {
-  background: rgba(19, 12, 25, 0.52);
-  border: 1px solid rgba(244, 173, 50, 0.24);
+.theme-thanksgiving .navbar .container {
+  background: rgba(28, 17, 9, 0.52);
+  border: 1px solid rgba(232, 164, 58, 0.24);
   border-radius: 14px;
   margin: 0.35rem auto;
   height: 56px;
 }
 
-.theme-halloween .navbar-brand,
-.theme-halloween .nav-links a {
+.theme-thanksgiving .navbar-brand,
+.theme-thanksgiving .nav-links a {
   color: #fff3df;
 }
 
-.theme-halloween .navbar-brand span,
-.theme-halloween .nav-links a:hover,
-.theme-halloween .nav-links a.active {
-  color: #f4ad32;
+.theme-thanksgiving .navbar-brand span,
+.theme-thanksgiving .nav-links a:hover,
+.theme-thanksgiving .nav-links a.active {
+  color: #e8a43a;
 }
 
-.theme-halloween .nav-links a::after {
-  background: linear-gradient(90deg, #f4ad32, #d14e83);
+.theme-thanksgiving .nav-links a::after {
+  background: linear-gradient(90deg, #e8a43a, #b5452e);
 }
 
-.theme-halloween .hamburger span {
-  background: #f4ad32;
+.theme-thanksgiving .hamburger span {
+  background: #e8a43a;
 }
 
-.theme-halloween .hero {
+.theme-thanksgiving .hero {
   padding: 7rem 1.5rem 7.25rem;
   background:
-    linear-gradient(180deg, rgba(19, 12, 25, 0.5), rgba(19, 12, 25, 0.8)),
-    url('images/background_halloween.jpg') center 60% / cover no-repeat;
+    linear-gradient(180deg, rgba(28, 17, 9, 0.5), rgba(28, 17, 9, 0.8)),
+    url('./images/background_thanksgiving.jpg') center 60% / cover no-repeat,
+    linear-gradient(135deg, #5a2d12 0%, #8a4a1a 45%, #4a2410 100%);
   color: #fff3df;
 }
 
-.theme-halloween .hero::before {
+.theme-thanksgiving .hero::before {
   background:
-    radial-gradient(circle at 50% 35%, rgba(244, 173, 50, 0.24), transparent 42%),
-    radial-gradient(circle at 50% 50%, rgba(209, 78, 131, 0.16), transparent 66%);
+    radial-gradient(circle at 50% 35%, rgba(232, 164, 58, 0.24), transparent 42%),
+    radial-gradient(circle at 50% 50%, rgba(181, 69, 46, 0.16), transparent 66%);
 }
 
-.theme-halloween .hero::after {
+.theme-thanksgiving .hero::after {
   content: '';
   position: absolute;
   inset: auto 0 -1px;
   height: 42px;
   background:
-    linear-gradient(135deg, transparent 25%, #24182b 25%) 0 0 / 36px 36px repeat-x,
-    linear-gradient(225deg, transparent 25%, #24182b 25%) 18px 0 / 36px 36px repeat-x,
-    linear-gradient(#24182b, #24182b) 0 18px / 100% 24px no-repeat;
+    linear-gradient(135deg, transparent 25%, #2f1d10 25%) 0 0 / 36px 36px repeat-x,
+    linear-gradient(225deg, transparent 25%, #2f1d10 25%) 18px 0 / 36px 36px repeat-x,
+    linear-gradient(#2f1d10, #2f1d10) 0 18px / 100% 24px no-repeat;
   pointer-events: none;
 }
 
-.theme-halloween .hero-eyebrow {
-  color: #ffc45a;
-  text-shadow: 0 2px 14px rgba(244, 173, 50, 0.35);
+.theme-thanksgiving .hero-eyebrow {
+  color: #f5c26b;
+  text-shadow: 0 2px 14px rgba(232, 164, 58, 0.35);
 }
 
-.theme-halloween .hero h1 {
+.theme-thanksgiving .hero h1 {
   color: #fff3df;
   text-shadow: 0 7px 24px rgba(0, 0, 0, 0.55);
 }
 
-.theme-halloween .hero h1 em {
-  color: #f4ad32;
-  text-shadow: 0 0 28px rgba(244, 173, 50, 0.4);
+.theme-thanksgiving .hero h1 em {
+  color: #e8a43a;
+  text-shadow: 0 0 28px rgba(232, 164, 58, 0.4);
 }
 
-.theme-halloween .hero-tagline {
+.theme-thanksgiving .hero-tagline {
   color: #f4dcbf;
 }
 
-.theme-halloween .section-title {
+.theme-thanksgiving .section-title {
   color: #fff3df;
 }
 
-.theme-halloween .section-title em {
-  color: #f4ad32;
+.theme-thanksgiving .section-title em {
+  color: #e8a43a;
 }
 
-.theme-halloween .section-subtitle {
-  color: #d4c2d1;
+.theme-thanksgiving .section-subtitle {
+  color: #dcc7a8;
 }
 
-.theme-halloween .section-divider {
+.theme-thanksgiving .section-divider {
   width: 88px;
   height: 4px;
-  background: linear-gradient(90deg, #d14e83, #f4ad32);
+  background: linear-gradient(90deg, #b5452e, #e8a43a);
 }
 
-.theme-halloween .btn {
+.theme-thanksgiving .btn {
   border-radius: 999px;
 }
 
-.theme-halloween .btn-primary {
-  background: linear-gradient(100deg, #f4ad32, #ffd06b);
-  border-color: #f4ad32;
-  color: #211427;
+.theme-thanksgiving .btn-primary {
+  background: linear-gradient(100deg, #e8a43a, #f7cf84);
+  border-color: #e8a43a;
+  color: #2a170a;
 }
 
-.theme-halloween .btn-primary:hover {
-  background: linear-gradient(100deg, #dc8d20, #f4ad32);
-  border-color: #dc8d20;
-  box-shadow: 0 9px 24px rgba(244, 173, 50, 0.3);
+.theme-thanksgiving .btn-primary:hover {
+  background: linear-gradient(100deg, #c98622, #e8a43a);
+  border-color: #c98622;
+  box-shadow: 0 9px 24px rgba(232, 164, 58, 0.3);
 }
 
-.theme-halloween .btn-outline {
-  background: rgba(27, 17, 34, 0.55);
+.theme-thanksgiving .btn-outline {
+  background: rgba(38, 23, 12, 0.55);
   border-color: rgba(255, 243, 223, 0.56);
   color: #fff3df;
 }
 
-.theme-halloween .btn-outline:hover {
-  background: rgba(209, 78, 131, 0.2);
-  border-color: #f4ad32;
+.theme-thanksgiving .btn-outline:hover {
+  background: rgba(181, 69, 46, 0.2);
+  border-color: #e8a43a;
 }
 
-.theme-halloween .about,
-.theme-halloween .news-section,
-.theme-halloween .news-archive,
-.theme-halloween .menu-section,
-.theme-halloween .menu-section:nth-child(even),
-.theme-halloween .page-hero,
-.theme-halloween footer {
-  background: linear-gradient(180deg, rgba(36, 24, 43, 0.98), rgba(27, 18, 34, 0.98));
+.theme-thanksgiving .about,
+.theme-thanksgiving .news-section,
+.theme-thanksgiving .news-archive,
+.theme-thanksgiving .menu-section,
+.theme-thanksgiving .menu-section:nth-child(even),
+.theme-thanksgiving .page-hero,
+.theme-thanksgiving footer {
+  background: linear-gradient(180deg, rgba(47, 29, 16, 0.98), rgba(39, 25, 14, 0.98));
 }
 
-.theme-halloween .specialties {
-  background: rgba(22, 15, 27, 0.96);
+.theme-thanksgiving .specialties {
+  background: rgba(31, 20, 12, 0.96);
 }
 
-.theme-halloween .page-hero {
-  border-bottom: 2px solid rgba(244, 173, 50, 0.35);
+.theme-thanksgiving .page-hero {
+  border-bottom: 2px solid rgba(232, 164, 58, 0.35);
 }
 
-.theme-halloween .page-hero p {
-  color: #d4c2d1;
+.theme-thanksgiving .page-hero p {
+  color: #dcc7a8;
 }
 
-.theme-halloween .about-text p,
-.theme-halloween .news-content p,
-.theme-halloween .info-block p,
-.theme-halloween .story-text p,
-.theme-halloween .training-step p,
-.theme-halloween .story-closing,
-.theme-halloween .menu-item-info p,
-.theme-halloween .hours-grid,
-.theme-halloween .gallery-caption,
-.theme-halloween .founder-caption p,
-.theme-halloween .card-body p {
-  color: #d4c2d1;
+.theme-thanksgiving .about-text p,
+.theme-thanksgiving .news-content p,
+.theme-thanksgiving .info-block p,
+.theme-thanksgiving .story-text p,
+.theme-thanksgiving .training-step p,
+.theme-thanksgiving .story-closing,
+.theme-thanksgiving .menu-item-info p,
+.theme-thanksgiving .hours-grid,
+.theme-thanksgiving .gallery-caption,
+.theme-thanksgiving .founder-caption p,
+.theme-thanksgiving .card-body p {
+  color: #dcc7a8;
 }
 
-.theme-halloween .about-text strong,
-.theme-halloween .story-text em,
-.theme-halloween .story-closing strong {
-  color: #ffc45a;
+.theme-thanksgiving .about-text strong,
+.theme-thanksgiving .story-text em,
+.theme-thanksgiving .story-closing strong {
+  color: #f5c26b;
 }
 
-.theme-halloween .about-image,
-.theme-halloween .contact-form-wrapper,
-.theme-halloween .news-post-card,
-.theme-halloween .news-card,
-.theme-halloween .menu-item,
-.theme-halloween .founder-card,
-.theme-halloween .training-step {
-  background: #30213a;
-  border: 1px solid rgba(244, 173, 50, 0.2);
-  box-shadow: 0 14px 32px rgba(10, 4, 14, 0.3);
+.theme-thanksgiving .about-image,
+.theme-thanksgiving .contact-form-wrapper,
+.theme-thanksgiving .news-post-card,
+.theme-thanksgiving .news-card,
+.theme-thanksgiving .menu-item,
+.theme-thanksgiving .founder-card,
+.theme-thanksgiving .training-step {
+  background: #43291a;
+  border: 1px solid rgba(232, 164, 58, 0.2);
+  box-shadow: 0 14px 32px rgba(18, 9, 3, 0.3);
 }
 
-.theme-halloween .about-image {
-  border-color: rgba(244, 173, 50, 0.38);
+.theme-thanksgiving .about-image {
+  border-color: rgba(232, 164, 58, 0.38);
 }
 
-.theme-halloween .about-image-placeholder,
-.theme-halloween .card-icon {
-  background: linear-gradient(145deg, #36243d, #25192f);
+.theme-thanksgiving .about-image-placeholder,
+.theme-thanksgiving .card-icon {
+  background: linear-gradient(145deg, #4a2f1c, #33200f);
 }
 
-.theme-halloween .cards-grid {
+.theme-thanksgiving .cards-grid {
   gap: 2rem;
 }
 
-.theme-halloween .card {
-  background: #30213a;
-  border: 1px solid rgba(244, 173, 50, 0.22);
+.theme-thanksgiving .card {
+  background: #43291a;
+  border: 1px solid rgba(232, 164, 58, 0.22);
   border-radius: 16px;
 }
 
-.theme-halloween .card:hover,
-.theme-halloween .training-step:hover {
-  border-color: #f4ad32;
-  box-shadow: 0 16px 34px rgba(10, 4, 14, 0.42);
+.theme-thanksgiving .card:hover,
+.theme-thanksgiving .training-step:hover {
+  border-color: #e8a43a;
+  box-shadow: 0 16px 34px rgba(18, 9, 3, 0.42);
 }
 
-.theme-halloween .card-icon {
-  border-bottom: 1px solid rgba(244, 173, 50, 0.16);
+.theme-thanksgiving .card-icon {
+  border-bottom: 1px solid rgba(232, 164, 58, 0.16);
 }
 
-.theme-halloween .card-body h3,
-.theme-halloween .news-content h3,
-.theme-halloween .contact-info h2,
-.theme-halloween .category-header h2,
-.theme-halloween .founder-caption h3,
-.theme-halloween .training-step h3 {
+.theme-thanksgiving .card-body h3,
+.theme-thanksgiving .news-content h3,
+.theme-thanksgiving .contact-info h2,
+.theme-thanksgiving .category-header h2,
+.theme-thanksgiving .founder-caption h3,
+.theme-thanksgiving .training-step h3 {
   color: #fff3df;
 }
 
-.theme-halloween .news-post-card,
-.theme-halloween .news-card {
-  border-color: rgba(209, 78, 131, 0.24);
+.theme-thanksgiving .news-post-card,
+.theme-thanksgiving .news-card {
+  border-color: rgba(181, 69, 46, 0.24);
 }
 
-.theme-halloween .news-post-card:hover,
-.theme-halloween .news-card:hover {
-  border-color: #f4ad32;
-  box-shadow: 0 16px 42px rgba(10, 4, 14, 0.45);
+.theme-thanksgiving .news-post-card:hover,
+.theme-thanksgiving .news-card:hover {
+  border-color: #e8a43a;
+  box-shadow: 0 16px 42px rgba(18, 9, 3, 0.45);
 }
 
-.theme-halloween .news-media-wrap,
-.theme-halloween .gallery-panel,
-.theme-halloween .founder-portrait-wrap {
-  background: #1a1221;
-  border-color: rgba(244, 173, 50, 0.2);
+.theme-thanksgiving .news-media-wrap,
+.theme-thanksgiving .gallery-panel,
+.theme-thanksgiving .founder-portrait-wrap {
+  background: #1c120a;
+  border-color: rgba(232, 164, 58, 0.2);
 }
 
-.theme-halloween .news-meta,
-.theme-halloween .info-block h3,
-.theme-halloween .menu-item-price,
-.theme-halloween .founder-img-placeholder small,
-.theme-halloween .training-step h3 {
-  color: #ffc45a;
+.theme-thanksgiving .news-meta,
+.theme-thanksgiving .info-block h3,
+.theme-thanksgiving .menu-item-price,
+.theme-thanksgiving .founder-img-placeholder small,
+.theme-thanksgiving .training-step h3 {
+  color: #f5c26b;
 }
 
-.theme-halloween .category-header {
-  border-bottom-color: rgba(244, 173, 50, 0.24);
+.theme-thanksgiving .category-header {
+  border-bottom-color: rgba(232, 164, 58, 0.24);
 }
 
-.theme-halloween .menu-item {
+.theme-thanksgiving .menu-item {
   border-color: rgba(255, 243, 223, 0.1);
 }
 
-.theme-halloween .menu-item:hover {
-  border-color: rgba(244, 173, 50, 0.55);
+.theme-thanksgiving .menu-item:hover {
+  border-color: rgba(232, 164, 58, 0.55);
 }
 
-.theme-halloween .contact-form-wrapper {
-  border-color: rgba(209, 78, 131, 0.28);
+.theme-thanksgiving .contact-form-wrapper {
+  border-color: rgba(181, 69, 46, 0.28);
 }
 
-.theme-halloween label {
-  color: #d4c2d1;
+.theme-thanksgiving label {
+  color: #dcc7a8;
 }
 
-.theme-halloween input[type="text"],
-.theme-halloween input[type="email"],
-.theme-halloween textarea {
-  background: #21172a;
+.theme-thanksgiving input[type="text"],
+.theme-thanksgiving input[type="email"],
+.theme-thanksgiving textarea {
+  background: #26170d;
   border-color: rgba(255, 243, 223, 0.16);
   color: #fff3df;
 }
 
-.theme-halloween input[type="text"]:focus,
-.theme-halloween input[type="email"]:focus,
-.theme-halloween textarea:focus {
-  border-color: #f4ad32;
-  box-shadow: 0 0 0 3px rgba(244, 173, 50, 0.18);
+.theme-thanksgiving input[type="text"]:focus,
+.theme-thanksgiving input[type="email"]:focus,
+.theme-thanksgiving textarea:focus {
+  border-color: #e8a43a;
+  box-shadow: 0 0 0 3px rgba(232, 164, 58, 0.18);
 }
 
-.theme-halloween input::placeholder,
-.theme-halloween textarea::placeholder {
-  color: rgba(201, 185, 200, 0.68);
+.theme-thanksgiving input::placeholder,
+.theme-thanksgiving textarea::placeholder {
+  color: rgba(217, 196, 164, 0.68);
 }
 
-.theme-halloween .form-submit {
-  background: #f4ad32;
-  border-color: #f4ad32;
-  color: #211427;
+.theme-thanksgiving .form-submit {
+  background: #e8a43a;
+  border-color: #e8a43a;
+  color: #2a170a;
 }
 
-.theme-halloween .form-submit:hover {
-  background: #dc8d20;
-  border-color: #dc8d20;
+.theme-thanksgiving .form-submit:hover {
+  background: #c98622;
+  border-color: #c98622;
 }
 
-.theme-halloween .eval-banner {
+.theme-thanksgiving .eval-banner {
   background:
-    radial-gradient(ellipse at 50% 0%, rgba(209, 78, 131, 0.32), transparent 58%),
-    linear-gradient(120deg, #281a34, #38213b 55%, #281a34);
+    radial-gradient(ellipse at 50% 0%, rgba(181, 69, 46, 0.32), transparent 58%),
+    linear-gradient(120deg, #33200f, #4a2c17 55%, #33200f);
   color: #fff3df;
-  border-top: 1px solid rgba(244, 173, 50, 0.3);
-  border-bottom: 1px solid rgba(244, 173, 50, 0.3);
+  border-top: 1px solid rgba(232, 164, 58, 0.3);
+  border-bottom: 1px solid rgba(232, 164, 58, 0.3);
 }
 
-.theme-halloween .eval-banner p {
-  color: #e0cedb;
+.theme-thanksgiving .eval-banner p {
+  color: #e6d3b5;
   opacity: 1;
 }
 
-.theme-halloween .btn-dark {
-  background: #f4ad32;
-  border-color: #f4ad32;
-  color: #211427;
+.theme-thanksgiving .btn-dark {
+  background: #e8a43a;
+  border-color: #e8a43a;
+  color: #2a170a;
 }
 
-.theme-halloween .btn-dark:hover {
-  background: #dc8d20;
-  border-color: #dc8d20;
+.theme-thanksgiving .btn-dark:hover {
+  background: #c98622;
+  border-color: #c98622;
 }
 
-.theme-halloween footer {
-  border-top: 2px solid rgba(209, 78, 131, 0.4);
+.theme-thanksgiving footer {
+  border-top: 2px solid rgba(181, 69, 46, 0.4);
 }
 
-.theme-halloween footer .footer-brand {
-  color: #f4ad32;
+.theme-thanksgiving footer .footer-brand {
+  color: #e8a43a;
 }
 
-.theme-halloween footer .footer-tagline,
-.theme-halloween footer p {
-  color: #c9b9c8;
+.theme-thanksgiving footer .footer-tagline,
+.theme-thanksgiving footer p {
+  color: #d9c4a4;
 }
 
-.theme-halloween .story-quote {
-  background: rgba(49, 31, 58, 0.82);
-  border-left-color: #f4ad32;
+.theme-thanksgiving .story-quote {
+  background: rgba(67, 41, 26, 0.82);
+  border-left-color: #e8a43a;
 }
 
-.theme-halloween .story-quote cite {
-  color: #ffc45a;
+.theme-thanksgiving .story-quote cite {
+  color: #f5c26b;
 }
 
-.theme-halloween .story-img,
-.theme-halloween .social-collage {
-  border-color: rgba(244, 173, 50, 0.3);
+.theme-thanksgiving .story-img,
+.theme-thanksgiving .social-collage {
+  border-color: rgba(232, 164, 58, 0.3);
 }
 
-.theme-halloween .story-img-caption {
-  color: #d4c2d1;
+.theme-thanksgiving .story-img-caption {
+  color: #dcc7a8;
 }
 
-.theme-halloween .founder-img-placeholder {
-  background: linear-gradient(135deg, #24182b, #34243a);
-  border-bottom-color: rgba(244, 173, 50, 0.3);
+.theme-thanksgiving .founder-img-placeholder {
+  background: linear-gradient(135deg, #2f1d10, #4a2f1c);
+  border-bottom-color: rgba(232, 164, 58, 0.3);
 }
 
-.theme-halloween .founder-img-placeholder p {
+.theme-thanksgiving .founder-img-placeholder p {
   color: #fff3df;
 }
 
-.theme-halloween .gallery-panel {
-  border-color: rgba(244, 173, 50, 0.35);
+.theme-thanksgiving .gallery-panel {
+  border-color: rgba(232, 164, 58, 0.35);
 }
 
-.theme-halloween .gallery-backdrop {
-  background: rgba(11, 5, 16, 0.88);
+.theme-thanksgiving .gallery-backdrop {
+  background: rgba(18, 9, 3, 0.88);
 }
 
-.theme-halloween .gallery-close,
-.theme-halloween .gallery-btn {
-  color: #ffc45a;
+.theme-thanksgiving .gallery-close,
+.theme-thanksgiving .gallery-btn {
+  color: #f5c26b;
 }
 
-.theme-halloween .gallery-btn {
-  border-color: rgba(244, 173, 50, 0.4);
-  background: #24182b;
+.theme-thanksgiving .gallery-btn {
+  border-color: rgba(232, 164, 58, 0.4);
+  background: #2f1d10;
 }
 
-.theme-halloween .gallery-btn:hover {
-  background: rgba(209, 78, 131, 0.2);
+.theme-thanksgiving .gallery-btn:hover {
+  background: rgba(181, 69, 46, 0.2);
 }
 
-.theme-halloween .news-empty {
-  background: rgba(209, 78, 131, 0.08);
-  border-color: rgba(244, 173, 50, 0.4);
-  color: #d4c2d1;
+.theme-thanksgiving .news-empty {
+  background: rgba(181, 69, 46, 0.08);
+  border-color: rgba(232, 164, 58, 0.4);
+  color: #dcc7a8;
 }
 
-.theme-halloween .duck-runner:focus-visible {
-  outline-color: #f4ad32;
+.theme-thanksgiving .duck-runner:focus-visible {
+  outline-color: #e8a43a;
 }
 
-.theme-halloween .duck-runner-duck {
-  background: #f4ad32;
-  border-color: #24182b;
+.theme-thanksgiving .duck-runner-duck {
+  background: #e8a43a;
+  border-color: #2f1d10;
 }
 
-.theme-halloween .duck-runner-duck::before {
-  background: #ffc45a;
-  border-color: #24182b;
+.theme-thanksgiving .duck-runner-duck::before {
+  background: #f5c26b;
+  border-color: #2f1d10;
 }
 
-.theme-halloween .duck-runner-duck::after,
-.theme-halloween .duck-runner-leg::after {
-  background: #e86f3a;
+.theme-thanksgiving .duck-runner-duck::after,
+.theme-thanksgiving .duck-runner-leg::after {
+  background: #d2692a;
 }
 
-.theme-halloween .duck-runner-eye,
-.theme-halloween .duck-runner-leg {
-  background: #24182b;
+.theme-thanksgiving .duck-runner-eye,
+.theme-thanksgiving .duck-runner-leg {
+  background: #2f1d10;
 }
 
-.theme-halloween .duck-runner-wing {
-  border-color: rgba(36, 24, 43, 0.72);
+.theme-thanksgiving .duck-runner-wing {
+  border-color: rgba(47, 29, 16, 0.72);
 }
 
-.theme-halloween .quack-language-control {
-  border-color: rgba(244, 173, 50, 0.58);
-  background: #21172a;
-  color: #ffc45a;
+.theme-thanksgiving .quack-language-control {
+  border-color: rgba(232, 164, 58, 0.58);
+  background: #26170d;
+  color: #f5c26b;
 }
 
-.theme-halloween .quack-language-control option {
-  background: #21172a;
-  color: #ffc45a;
+.theme-thanksgiving .quack-language-control option {
+  background: #26170d;
+  color: #f5c26b;
 }
 
-.theme-halloween :is(a, button, input, textarea):focus-visible {
-  outline: 3px solid #f4ad32;
+.theme-thanksgiving :is(a, button, input, textarea):focus-visible {
+  outline: 3px solid #e8a43a;
   outline-offset: 3px;
 }
 
 @media (max-width: 768px) {
-  .theme-halloween .navbar .container {
+  .theme-thanksgiving .navbar .container {
     border-radius: 0;
     margin: 0;
     height: 64px;
@@ -2180,26 +2181,26 @@ footer p {
     border: 0;
   }
 
-  .theme-halloween .nav-links {
-    background: rgba(36, 24, 43, 0.98);
-    border-top: 2px solid rgba(244, 173, 50, 0.36);
+  .theme-thanksgiving .nav-links {
+    background: rgba(47, 29, 16, 0.98);
+    border-top: 2px solid rgba(232, 164, 58, 0.36);
   }
 
-  .theme-halloween .hero {
+  .theme-thanksgiving .hero {
     padding: 5.2rem 1.1rem 5.8rem;
   }
 
-  .theme-halloween .contact-grid {
+  .theme-thanksgiving .contact-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 }
 
 @media (max-width: 480px) {
-  .theme-halloween .section-title {
+  .theme-thanksgiving .section-title {
     font-size: clamp(1.65rem, 7vw, 2.2rem);
   }
 
-  .theme-halloween .contact-info h2 {
+  .theme-thanksgiving .contact-info h2 {
     font-size: clamp(1.4rem, 7vw, 2rem);
     overflow-wrap: anywhere;
   }
