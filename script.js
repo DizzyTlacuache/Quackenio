@@ -33,11 +33,21 @@
 
   //window.quackenioPlayQuack = playQuack;
 
+  const rickRollUrl = 'https://youtu.be/dQw4w9WgXcQ';
+  const rickRollChance = 0.1;
+
+  function maybeRickRoll() {
+    if (Math.random() < rickRollChance) {
+      window.open(rickRollUrl, '_blank', 'noopener,noreferrer');
+    }
+  }
+
   document.addEventListener('pointerdown', (event) => {
     const target = event.target.closest(clickableSelector);
     if (!target) return;
 
     playQuack();
+    maybeRickRoll();
   }, { capture: true });
 
   document.addEventListener('click', (event) => {
