@@ -95,9 +95,10 @@
       notes.forEach((note) => {
         const oscillator = audioContext.createOscillator();
         const voiceGain = audioContext.createGain();
-        oscillator.type = 'sine';
-        oscillator.frequency.value = 440 * Math.pow(2, (note - 69) / 12);
-        voiceGain.gain.value = 0.035;
+        oscillator.type = 'triangle';
+        // Shifted up an octave so small speakers can reproduce the notes.
+        oscillator.frequency.value = 440 * Math.pow(2, (note + 12 - 69) / 12);
+        voiceGain.gain.value = 0.08;
         oscillator.connect(voiceGain);
         voiceGain.connect(chordGain);
         oscillator.start();
@@ -139,7 +140,7 @@
       isPlaying = true;
       const now = audioContext.currentTime;
       masterGain.gain.cancelScheduledValues(now);
-      masterGain.gain.setTargetAtTime(0.2, now, 0.5);
+      masterGain.gain.setTargetAtTime(0.6, now, 0.5);
       let chordIndex = 0;
       selectChord(chordIndex);
       chordTimer = window.setInterval(() => {
