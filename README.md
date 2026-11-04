@@ -12,6 +12,7 @@ El proyecto ya incluye:
 - Sistema de noticias dinamico (home + archivo) desde un solo archivo de datos.
 - Selector persistente de idioma: Quackquackence, Perro y Castellano.
 - Efectos de sonido "quack" en interacciones.
+- Música ambiental sintetizada con control de reproducción y sin autoplay.
 - Visor de galeria (zoom, navegacion, teclado, rueda y swipe).
 - Formulario de contacto con validacion del lado del cliente.
 
@@ -40,7 +41,8 @@ El proyecto ya incluye:
 	- Traduce texto visible y atributos (placeholder, aria-label, title, alt).
 	- Incluye Quackquackence ("quack"), Perro ("guau") y Castellano (texto original).
 	- Persiste la seleccion en localStorage y conserva compatibilidad con el toggle anterior.
-- Efecto de sonido quack en botones, tabs y links de navegacion.
+- Efecto de sonido quack en botones, tabs y links de navegacion (excepto el control de música).
+- Música ambiental en acordes suaves, activada manualmente y pausada al solicitarlo.
 - Scroll reveal para elementos clave.
 - Formulario de contacto con validaciones basicas y envio simulado.
 - Modal de galeria para imagenes con controles de zoom y navegacion.
