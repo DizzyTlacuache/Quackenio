@@ -2167,6 +2167,28 @@ footer p {
   color: #f5c26b;
 }
 
+.ambient-music-control {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 2100;
+  border: 1px solid rgba(232, 164, 58, 0.58);
+  border-radius: 999px;
+  padding: 0.55rem 0.85rem;
+  background: #26170d;
+  color: #f5c26b;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+.ambient-music-control:focus-visible {
+  outline: 3px solid #e8a43a;
+  outline-offset: 3px;
+}
+
 .theme-thanksgiving :is(a, button, input, textarea):focus-visible {
   outline: 3px solid #e8a43a;
   outline-offset: 3px;

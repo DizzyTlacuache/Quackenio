@@ -4,7 +4,7 @@
 
 // ── Duck SFX on buttons and tabs ────────────────
 (function () {
-  const clickableSelector = '.btn, button, .nav-links a';
+  const clickableSelector = '.btn, button:not(.ambient-music-control), .nav-links a';
   const quackSrc = 'audio/quack_duck_sound.mp3';
   const quackVariations = [0.92, 1.0, 1.08, 1.15];
 
@@ -53,6 +53,108 @@
       window.location.href = href;
     }, 120);
   }, { capture: true });
+})();
+
+// ── Ambient music control ─────────────────────────
+(function () {
+  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContextClass) return;
+
+  const chords = [
+    [50, 54, 57, 61],
+    [47, 50, 54, 57],
+    [43, 47, 50, 54],
+    [45, 49, 52, 55]
+  ];
+  const control = document.createElement('button');
+  control.type = 'button';
+  control.className = 'ambient-music-control';
+  control.setAttribute('aria-pressed', 'false');
+  control.textContent = '♫ Música ambiental: apagada';
+  document.body.appendChild(control);
+
+  let audioContext;
+  let masterGain;
+  let chordGains;
+  let chordTimer;
+  let suspendTimer;
+  let isPlaying = false;
+  let isStarting = false;
+
+  function createMusic() {
+    audioContext = new AudioContextClass();
+    masterGain = audioContext.createGain();
+    masterGain.gain.value = 0;
+    masterGain.connect(audioContext.destination);
+
+    chordGains = chords.map((notes) => {
+      const chordGain = audioContext.createGain();
+      chordGain.gain.value = 0;
+      chordGain.connect(masterGain);
+
+      notes.forEach((note) => {
+        const oscillator = audioContext.createOscillator();
+        const voiceGain = audioContext.createGain();
+        oscillator.type = 'sine';
+        oscillator.frequency.value = 440 * Math.pow(2, (note - 69) / 12);
+        voiceGain.gain.value = 0.035;
+        oscillator.connect(voiceGain);
+        voiceGain.connect(chordGain);
+        oscillator.start();
+      });
+
+      return chordGain;
+    });
+  }
+
+  function selectChord(index) {
+    const now = audioContext.currentTime;
+    chordGains.forEach((gain, chordIndex) => {
+      gain.gain.cancelScheduledValues(now);
+      gain.gain.setTargetAtTime(chordIndex === index ? 1 : 0, now, 1.5);
+    });
+  }
+
+  control.addEventListener('click', async () => {
+    if (isStarting) return;
+
+    if (isPlaying) {
+      isPlaying = false;
+      window.clearInterval(chordTimer);
+      masterGain.gain.setTargetAtTime(0, audioContext.currentTime, 0.25);
+      suspendTimer = window.setTimeout(() => {
+        if (!isPlaying) audioContext.suspend();
+      }, 1500);
+      control.textContent = '♫ Música ambiental: apagada';
+      control.setAttribute('aria-pressed', 'false');
+      return;
+    }
+
+    isStarting = true;
+    try {
+      window.clearTimeout(suspendTimer);
+      if (!audioContext) createMusic();
+      await audioContext.resume();
+      isStarting = false;
+      isPlaying = true;
+      const now = audioContext.currentTime;
+      masterGain.gain.cancelScheduledValues(now);
+      masterGain.gain.setTargetAtTime(0.2, now, 0.5);
+      let chordIndex = 0;
+      selectChord(chordIndex);
+      chordTimer = window.setInterval(() => {
+        chordIndex = (chordIndex + 1) % chords.length;
+        selectChord(chordIndex);
+      }, 8000);
+      control.textContent = '♫ Música ambiental: encendida';
+      control.setAttribute('aria-pressed', 'true');
+    } catch (error) {
+      isStarting = false;
+      isPlaying = false;
+      control.textContent = '♫ Música ambiental: apagada';
+      control.setAttribute('aria-pressed', 'false');
+    }
+  });
 })();
 
 // ── Decorative: running duck across the viewport ─
