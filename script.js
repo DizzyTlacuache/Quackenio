@@ -126,19 +126,43 @@
     });
   }
 
-  control.addEventListener('click', async () => {
-    if (isStarting) return;
+  const STORAGE_KEY = 'quackenio-ambient-music';
+  function saveState(on) {
+    try { localStorage.setItem(STORAGE_KEY, on ? 'on' : 'off'); } catch (e) { /* storage unavailable */ }
+  }
+
+  const EPOCH_KEY = 'quackenio-ambient-epoch';
+  const PAUSED_KEY = 'quackenio-ambient-paused';
+  const CHORD_MS = 8000;
+
+  // Elapsed ms in the track: live (page navigation) or where it was paused.
+  function savedElapsed(live) {
+    try {
+      const value = Number(localStorage.getItem(live ? EPOCH_KEY : PAUSED_KEY));
+      if (!value) return 0;
+      return live ? Math.max(0, Date.now() - value) : value;
+    } catch (e) {
+      return 0;
+    }
+  }
+
+  async function toggleMusic(fromRestore) {
+    if (isStarting) return false;
 
     if (isPlaying) {
       isPlaying = false;
-      window.clearInterval(chordTimer);
+      saveState(false);
+      try {
+        localStorage.setItem(PAUSED_KEY, String(Date.now() - Number(localStorage.getItem(EPOCH_KEY))));
+      } catch (e) { /* ignore */ }
+      window.clearTimeout(chordTimer);
       masterGain.gain.setTargetAtTime(0, audioContext.currentTime, 0.25);
       suspendTimer = window.setTimeout(() => {
         if (!isPlaying) audioContext.suspend();
       }, 1500);
       control.textContent = '♫ Música ambiental: apagada';
       control.setAttribute('aria-pressed', 'false');
-      return;
+      return true;
     }
 
     isStarting = true;
@@ -146,26 +170,54 @@
       window.clearTimeout(suspendTimer);
       if (!audioContext) createMusic();
       await audioContext.resume();
+      if (audioContext.state !== 'running') throw new Error('Audio blocked');
       isStarting = false;
       isPlaying = true;
+      saveState(true);
       const now = audioContext.currentTime;
       masterGain.gain.cancelScheduledValues(now);
       masterGain.gain.setTargetAtTime(0.6, now, 0.5);
-      let chordIndex = 0;
-      selectChord(chordIndex);
-      chordTimer = window.setInterval(() => {
-        chordIndex = (chordIndex + 1) % chords.length;
-        selectChord(chordIndex);
-      }, 8000);
+      // Resume from the saved position in the chord cycle.
+      const epoch = Date.now() - (fromRestore ? savedElapsed(true) : savedElapsed(false));
+      try { localStorage.setItem(EPOCH_KEY, String(epoch)); } catch (e) { /* ignore */ }
+      const stepChord = () => {
+        const elapsed = Date.now() - epoch;
+        selectChord(Math.floor(elapsed / CHORD_MS) % chords.length);
+        chordTimer = window.setTimeout(stepChord, CHORD_MS - (elapsed % CHORD_MS));
+      };
+      stepChord();
       control.textContent = '♫ Música ambiental: encendida';
       control.setAttribute('aria-pressed', 'true');
+      return true;
     } catch (error) {
       isStarting = false;
       isPlaying = false;
+      if (!fromRestore) saveState(false);
       control.textContent = '♫ Música ambiental: apagada';
       control.setAttribute('aria-pressed', 'false');
+      return false;
     }
-  });
+  }
+
+  control.addEventListener('click', () => toggleMusic(false));
+
+  // Restore state after page navigation; if the browser blocks autoplay,
+  // retry on the first user interaction.
+  let wasOn = false;
+  try { wasOn = localStorage.getItem(STORAGE_KEY) === 'on'; } catch (e) { /* ignore */ }
+  if (wasOn) {
+    toggleMusic(true).then((started) => {
+      if (started) return;
+      const retry = (event) => {
+        if (control.contains(event.target)) return;
+        document.removeEventListener('pointerdown', retry, true);
+        document.removeEventListener('keydown', retry, true);
+        if (!isPlaying) toggleMusic(true);
+      };
+      document.addEventListener('pointerdown', retry, true);
+      document.addEventListener('keydown', retry, true);
+    });
+  }
 })();
 
 // ── Decorative: running duck across the viewport ─
