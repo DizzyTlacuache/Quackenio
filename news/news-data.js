@@ -333,6 +333,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "¿que hace aquí? chismosille",
     excerpt:
       "En un esfuerzo por cuidar el medio ambiente, Quackenio innova con un nuevo producto oficial: ¡agua en polvo! Solo agrega agua. ¿Por qué el pato llevó una sombrilla? ¡Por si llovía sobre su agua en polvo! Cuac. #rutaAzul #quackenio #aguaenpolvo"
+  },
+  {
+    id: "2026-11-11-paseo",
+    date: "2026-11-11",
+    title: "Paseo del Patrón Quackenio",
+    category: "Noticias",
+    image: "news/111126_paseo.jpeg",
+    imageAlt: "¿que hace aquí? chismosille",
+    excerpt:
+      "El Patrón Quackencio salió a pasear con su consorte real, disfrutando del aire fresco y saludando a sus súbditos con mucho cuac. ¿Por qué el pato invitó a su consorte al estanque? ¡Porque quería compartir una cita de aguas reales! #Quackenio #paseoreal #cuac"
   }
 ];
     
