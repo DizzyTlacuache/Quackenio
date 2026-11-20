@@ -343,6 +343,26 @@ window.QUACKENIO_NEWS = [
     imageAlt: "¿que hace aquí? chismosille",
     excerpt:
       "El Patrón Quackencio salió a pasear con su consorte real, disfrutando del aire fresco y saludando a sus súbditos con mucho cuac. ¿Por qué el pato invitó a su consorte al estanque? ¡Porque quería compartir una cita de aguas reales! #Quackenio #paseoreal #cuac"
+  },
+  {
+    id: "2026-11-19-gta",
+    date: "2026-11-19",
+    title: "Sin servicio: Quackencio anda en GTA",
+    category: "Noticias",
+    image: "news/191126_gta.jpg",
+    imageAlt: "¿que hace aquí? chismosille",
+    excerpt:
+      "Quackencio anda estrenando GTA 6, así que hoy no hay café: se fue a hacer cuac-robacias por Los Santos. ¿Por qué el pato no pausa la partida? ¡Porque está en plena misión emplumada! #Quackencio #GTA6 #HoyNoHayCafe"
+  },
+  {
+    id: "2026-11-20-paseo",
+    date: "2026-11-20",
+    title: "El Show de Quackencio",
+    category: "Noticias",
+    image: "news/201126_tele.jpg",
+    imageAlt: "¿que hace aquí? chismosille",
+    excerpt:
+      "¡Reúne a toda la familia para disfrutar del Show de Quackencio! Risas, sorpresas y mucho cuac los esperan en una experiencia para compartir juntos. #Quackencio #ShowDeQuackencio #PlanEnFamilia"
   }
 ];
     
