@@ -363,6 +363,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "¿que hace aquí? chismosille",
     excerpt:
       "¡Reúne a toda la familia para disfrutar del Show de Quackencio! Risas, sorpresas y mucho cuac los esperan en una experiencia para compartir juntos. #Quackencio #ShowDeQuackencio #PlanEnFamilia"
+  },
+  {
+    id: "2026-11-23-madness",
+    date: "2026-11-23",
+    title: "Quackenio Madness: ¡el torneo de cuacks ha comenzado!",
+    category: "Noticias",
+    image: "news/231126_madness.jpg",
+    imageAlt: "¿que hace aquí? chismosille",
+    excerpt:
+      "Quackenio Madness a comenzado! Esta presenta al maestro barista Quackencio haciendo su actividad favorita: no hacer nada. Se pasa el día en modo pato-inactivo, sin aletear ni un cuac extra. ¡Hasta descansar requiere mucha pata-ciencia! #QuackenioMadness #Quackencio #DoingNothing"
   }
 ];
     
