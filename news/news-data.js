@@ -373,6 +373,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "¿que hace aquí? chismosille",
     excerpt:
       "Quackenio Madness a comenzado! Esta presenta al maestro barista Quackencio haciendo su actividad favorita: no hacer nada. Se pasa el día en modo pato-inactivo, sin aletear ni un cuac extra. ¡Hasta descansar requiere mucha pata-ciencia! #QuackenioMadness #Quackencio #DoingNothing"
+  },
+  {
+    id: "2026-11-24-banking",
+    date: "2026-11-24",
+    title: "Nuevo modelo de negocio: Banking Quackenio",
+    category: "Noticias",
+    image: "news/241126_banking.jpg",
+    imageAlt: "¿que hace aquí? chismosille",
+    excerpt:
+      "¡Presentamos Quack Banking! Por fin puedes invertir con toda confianza: nuestros asesores nunca están en pelícanos financieros y siempre te dicen dónde colocar tus cuac-ahorros. #CuackNow #QuackBanking #Duckonomics"
   }
 ];
     
