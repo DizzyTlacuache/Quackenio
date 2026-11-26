@@ -383,6 +383,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "¿que hace aquí? chismosille",
     excerpt:
       "¡Presentamos Quack Banking! Por fin puedes invertir con toda confianza: nuestros asesores nunca están en pelícanos financieros y siempre te dicen dónde colocar tus cuac-ahorros. #CuackNow #QuackBanking #Duckonomics"
+  },
+  {
+    id: "2026-11-26-diablo",
+    date: "2026-11-26",
+    title: "Feliz dia del pavo",
+    category: "Noticias",
+    image: "news/261126_diablo.jpg",
+    imageAlt: "¿que hace aquí? chismosille",
+    excerpt:
+      "¡Feliz Día de Acción de Gracias! En Quackenio damos gracias por cada amigo, cada bocado y cada cuac: hoy los patos no hacen drama, ¡hacen una cena de aleta! Y nuestro guajolote especial, el Diablo Quackencio, llegó con plumas de fuego para ponerle sazón infernal al festejo. ¡Que no falte pavo ni pata-ciencia para guardar las sobras! #Thanksgiving #DiabloQuackencio #CuacAccionDeGracias"
   }
 ];
     
