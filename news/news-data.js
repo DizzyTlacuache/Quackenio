@@ -393,6 +393,16 @@ window.QUACKENIO_NEWS = [
     imageAlt: "¿que hace aquí? chismosille",
     excerpt:
       "¡Feliz Día de Acción de Gracias! En Quackenio damos gracias por cada amigo, cada bocado y cada cuac: hoy los patos no hacen drama, ¡hacen una cena de aleta! Y nuestro guajolote especial, el Diablo Quackencio, llegó con plumas de fuego para ponerle sazón infernal al festejo. ¡Que no falte pavo ni pata-ciencia para guardar las sobras! #Thanksgiving #DiabloQuackencio #CuacAccionDeGracias"
+  },
+  {
+    id: "2026-11-27-feliz-navidad",
+    date: "2026-11-27",
+    title: "¡Feliz Navidad de parte de Quackenio!",
+    category: "Noticias",
+    image: "news/271126_christmas.jpg",
+    imageAlt: "Barista y mascota de Quackenio con gorros navideños y un letrero de Feliz Navidad",
+    excerpt:
+      "¡En Quackenio les deseamos una muy feliz Navidad! Que esta temporada esté llena de café calientito, momentos en familia y muchos cuacks para compartir. ¡Felices fiestas de parte de todo el nido! #Quackenio #FelizNavidad #CuackNavideño"
   }
 ];
     
