@@ -32,11 +32,12 @@ Display usa Playfair Display con fallback a Bebas Neue; el cuerpo usa Lora con f
 - **Botones:** dorado con texto oscuro para la acción principal; secundarios oscuros con contorno claro.
 - **Cards, formularios y noticias:** superficies por capas, foco visible e imágenes editoriales sin recorte.
 - **Detalle estacional:** franja discreta en rojo, dorado y verde, inspirada en los colores festivos de la imagen.
+- **Nieve:** copos sutiles en todas las páginas del tema, sin interferir con controles ni contenido.
 
 ## 5. Voz y accesibilidad
 - Español cercano con guiños de pato y referencias a posadas y convivencia, sin inventar productos o promociones.
 - No cambiar precios, horarios, rutas o datos de contacto.
-- Conservar navegación móvil, contraste, foco visible y la preferencia existente de movimiento reducido.
+- Conservar navegación móvil, contraste y foco visible; desactivar la nieve cuando se prefiera movimiento reducido.
 
 ## 6. Aplicación
 Las páginas usan la clase `theme-christmas` en `<body>`. La estructura sigue la guía base; esta guía define la capa estacional.

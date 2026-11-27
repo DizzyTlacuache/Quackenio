@@ -2481,3 +2481,45 @@ footer p {
     overflow-wrap: anywhere;
   }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .theme-christmas::before,
+  .theme-christmas::after {
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .theme-christmas::before {
+    top: -300px;
+    background-image:
+      radial-gradient(circle, rgba(255, 250, 235, 0.65) 1.5px, transparent 2.5px),
+      radial-gradient(circle, rgba(255, 250, 235, 0.45) 1px, transparent 2px),
+      radial-gradient(circle, rgba(255, 250, 235, 0.5) 1.5px, transparent 2.5px);
+    background-size: 280px 300px;
+    background-position: 20px 20px, 125px 105px, 220px 215px;
+    animation: christmas-snow-near 18s linear infinite;
+  }
+
+  .theme-christmas::after {
+    top: -420px;
+    background-image:
+      radial-gradient(circle, rgba(255, 250, 235, 0.4) 1px, transparent 2px),
+      radial-gradient(circle, rgba(255, 250, 235, 0.35) 1px, transparent 2px);
+    background-size: 340px 420px;
+    background-position: 70px 80px, 230px 270px;
+    animation: christmas-snow-far 28s linear infinite;
+  }
+
+  @keyframes christmas-snow-near {
+    to { transform: translateY(300px); }
+  }
+
+  @keyframes christmas-snow-far {
+    to { transform: translateY(420px); }
+  }
+}
