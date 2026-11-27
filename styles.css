@@ -2227,3 +2227,257 @@ footer p {
     overflow-wrap: anywhere;
   }
 }
+
+/* ---------- Seasonal Theme: Navidad mexicana ---------- */
+.theme-christmas {
+  --black: #101e1b;
+  --dark: #172d28;
+  --dark-card: #233c34;
+  --yellow: #f2c56f;
+  --yellow-hover: #e0ad54;
+  --orange: #d78a56;
+  --white: #fff5e3;
+  --gray: #e3d6c1;
+  --bg: var(--black);
+  --bg-section: var(--dark);
+  --bg-alt: #1c332d;
+  --text: var(--white);
+  --text-muted: var(--gray);
+  --accent: var(--yellow);
+  --accent-2: #a63e3e;
+  --shadow: rgba(5, 16, 13, 0.55);
+  --font-heading: 'Playfair Display', 'Bebas Neue', serif;
+  --font-body: 'Lora', 'Inter', serif;
+
+  background: linear-gradient(180deg, #101e1b, #1a3029 50%, #101e1b);
+  color: var(--text);
+}
+
+.theme-christmas .navbar {
+  background: linear-gradient(180deg, #1c3931, #10241f);
+  border-bottom: 2px solid var(--yellow);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.theme-christmas .navbar .container {
+  background: rgba(8, 24, 19, 0.45);
+  border-color: rgba(242, 197, 111, 0.25);
+}
+
+.theme-christmas .navbar-brand,
+.theme-christmas .nav-links a {
+  color: var(--white);
+}
+
+.theme-christmas .navbar-brand span,
+.theme-christmas .nav-links a:hover,
+.theme-christmas .nav-links a.active {
+  color: var(--yellow);
+}
+
+.theme-christmas .nav-links a::after {
+  background: linear-gradient(90deg, #f2c56f, #bc5850);
+}
+
+.theme-christmas .hamburger span {
+  background: var(--yellow);
+}
+
+.theme-christmas .hero {
+  min-height: 570px;
+  padding: 8rem 1.5rem 9rem;
+  background:
+    linear-gradient(180deg, rgba(7, 17, 26, 0.64), rgba(7, 17, 20, 0.42) 60%, rgba(12, 31, 25, 0.65)),
+    url('images/background_christmas.jpg') center 62% / cover no-repeat,
+    #10241f;
+  color: var(--white);
+}
+
+.theme-christmas .hero::before {
+  background: radial-gradient(ellipse at 50% 35%, rgba(12, 25, 24, 0.6), transparent 60%);
+}
+
+.theme-christmas .hero::after {
+  inset: auto 0 0;
+  height: 12px;
+  background: repeating-linear-gradient(90deg, #a63e3e 0 24px, #f2c56f 24px 48px, #315e49 48px 72px);
+}
+
+.theme-christmas .hero-eyebrow,
+.theme-christmas .hero h1 em {
+  color: var(--yellow);
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.8);
+}
+
+.theme-christmas .hero h1 {
+  color: var(--white);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.85);
+}
+
+.theme-christmas .hero-tagline {
+  color: var(--white);
+  text-shadow: 0 2px 10px #000;
+}
+
+.theme-christmas .section-title,
+.theme-christmas :is(.card-body h3, .news-content h3, .contact-info h2, .category-header h2, .founder-caption h3, .training-step h3) {
+  color: var(--white);
+}
+
+.theme-christmas .section-title em {
+  color: var(--yellow);
+}
+
+.theme-christmas .section-subtitle,
+.theme-christmas :is(.page-hero p, .about-text p, .news-content p, .info-block p, .story-text p, .training-step p, .story-closing, .menu-item-info p, .hours-grid, .gallery-caption, .founder-caption p, .card-body p) {
+  color: var(--gray);
+}
+
+.theme-christmas .section-divider {
+  background: linear-gradient(90deg, #a63e3e, var(--yellow), #a63e3e);
+}
+
+.theme-christmas .btn-primary,
+.theme-christmas .btn-dark,
+.theme-christmas .form-submit {
+  background: var(--yellow);
+  border-color: var(--yellow);
+  color: #17241d;
+}
+
+.theme-christmas :is(.btn-primary, .btn-dark, .form-submit):hover {
+  background: var(--yellow-hover);
+  border-color: var(--yellow-hover);
+}
+
+.theme-christmas .btn-outline {
+  background: rgba(12, 31, 25, 0.85);
+  border-color: rgba(255, 245, 227, 0.7);
+  color: var(--white);
+}
+
+.theme-christmas .btn-outline:hover {
+  background: #315044;
+  border-color: var(--yellow);
+}
+
+.theme-christmas :is(.about, .news-section, .news-archive, .menu-section, .menu-section:nth-child(even), .page-hero, footer) {
+  background: linear-gradient(180deg, #172d28, #10221e);
+}
+
+.theme-christmas .specialties {
+  background: var(--black);
+}
+
+.theme-christmas :is(.page-hero, footer) {
+  border-color: rgba(242, 197, 111, 0.35);
+}
+
+.theme-christmas :is(.about-image, .contact-form-wrapper, .news-post-card, .news-card, .menu-item, .founder-card, .training-step, .card) {
+  background: var(--dark-card);
+  border-color: rgba(242, 197, 111, 0.25);
+  box-shadow: 0 14px 32px rgba(5, 16, 13, 0.3);
+}
+
+.theme-christmas :is(.card, .training-step, .news-post-card, .news-card, .menu-item):hover {
+  border-color: var(--yellow);
+}
+
+.theme-christmas :is(.about-image-placeholder, .card-icon) {
+  background: linear-gradient(145deg, #315044, #192e27);
+}
+
+.theme-christmas :is(.news-media-wrap, .gallery-panel, .founder-portrait-wrap) {
+  background: #101e1b;
+  border-color: rgba(242, 197, 111, 0.25);
+}
+
+.theme-christmas :is(.news-meta, .info-block h3, .menu-item-price, .founder-img-placeholder small, .training-step h3) {
+  color: var(--yellow);
+}
+
+.theme-christmas label {
+  color: var(--gray);
+}
+
+.theme-christmas :is(input[type="text"], input[type="email"], textarea) {
+  background: #10221e;
+  border-color: rgba(255, 245, 227, 0.3);
+  color: var(--white);
+}
+
+.theme-christmas :is(input, textarea)::placeholder {
+  color: #c4b8a5;
+}
+
+.theme-christmas .eval-banner {
+  background: radial-gradient(ellipse at top, rgba(166, 62, 62, 0.35), transparent 65%), #203a30;
+  color: var(--white);
+  border-block: 1px solid rgba(242, 197, 111, 0.3);
+}
+
+.theme-christmas .eval-banner p {
+  color: var(--white);
+  opacity: 1;
+}
+
+.theme-christmas footer .footer-brand {
+  color: var(--yellow);
+}
+
+.theme-christmas footer :is(.footer-tagline, p) {
+  color: var(--gray);
+}
+
+.theme-christmas :is(.quack-language-control, .quack-language-control option, .ambient-music-control, .gallery-btn) {
+  background: #10221e;
+  color: var(--yellow);
+  border-color: rgba(242, 197, 111, 0.65);
+}
+
+.theme-christmas :is(a, button, input, textarea, select):focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .theme-christmas .navbar .container {
+    background: transparent;
+    border: 0;
+  }
+
+  .theme-christmas .nav-links {
+    background: #172d28;
+    border-top: 2px solid rgba(242, 197, 111, 0.45);
+  }
+
+  .theme-christmas .hero {
+    min-height: 580px;
+    padding: 5.2rem 1.1rem 6rem;
+    background-position: center, 78% center, center;
+  }
+
+  .theme-christmas .contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-christmas .hero h1 {
+    font-size: clamp(2rem, 9.5vw, 3.5rem);
+    letter-spacing: 0.02em;
+  }
+
+  .theme-christmas .ambient-music-control {
+    bottom: 4.5rem;
+  }
+
+  .theme-christmas .section-title {
+    font-size: clamp(1.65rem, 7vw, 2.2rem);
+  }
+
+  .theme-christmas .contact-info h2 {
+    font-size: clamp(1.4rem, 7vw, 2rem);
+    overflow-wrap: anywhere;
+  }
+}

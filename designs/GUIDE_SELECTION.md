@@ -8,7 +8,8 @@ Guias actuales:
 - DESIGN_TROPICAL.md
 - DESIGN_BACKSCHOOL.md
 - DESIGN_HALLOWEEN.md
-- DESIGN_THANKSGIVING.md (tema activo)
+- DESIGN_THANKSGIVING.md
+- DESIGN_CHRISTMAS.md (tema activo)
 
 ## Cuando usar cada guia
 
@@ -41,9 +42,14 @@ Usar esta guia cuando:
 - La experiencia activa sea Acción de Gracias (otoño, cosecha, gratitud).
 - Se apliquen la paleta nogal, dorado cosecha, calabaza y arándano.
 
+### Usar DESIGN_CHRISTMAS.md (guia seasonal)
+Usar esta guia cuando:
+- La experiencia activa sea Navidad con inspiración en tradiciones mexicanas.
+- Se apliquen referencias a posadas, nacimiento, nochebuenas y luces cálidas.
+
 ## Regla de prioridad entre guias
 Cuando ambas guias describan el mismo componente:
-1. Si hay una temporada activa, manda la guia seasonal correspondiente (Halloween, back to school o tropical).
+1. Si hay una temporada activa, manda la guia seasonal correspondiente.
 2. Si no hay temporada activa, manda DESIGN.md.
 3. Si hay duda, conservar la estructura de DESIGN.md y aplicar solo la capa visual seasonal pertinente.
 
